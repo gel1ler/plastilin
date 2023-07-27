@@ -7,8 +7,10 @@ import kids from '../../../public/cloud-kids.png'
 const About = () => {
     return (
         <Box
+            id='about'
             sx={{
                 height: '100vh',
+                pt: '80px'
             }}
         >
             <Title>О нас</Title>
@@ -24,6 +26,7 @@ const About = () => {
                 </Typography>
                 <Image
                     src={kids}
+                    alt='Фото дети'
                     style={{ objectFit: 'contain', height: 'auto', width: '100%', }}
                 />
             </Box>

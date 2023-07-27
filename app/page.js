@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import Header from '@/components/header'
+import Header from '@/components/header/header'
 import Start from '@/components/pages/index/start'
 import About from '@/components/pages/index/about'
 

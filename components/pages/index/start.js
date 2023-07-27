@@ -8,51 +8,51 @@ import Title from '@/components/UI/title'
 const Start = () => {
     return (
         <Box
+            id='home'
             sx={{
+                height: '100vh',
+                mx: 'auto',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                // justifyContent: 'center',
-                height: '90vh',
-                mx: 'auto',
-                pt: '10vh',
+                justifyContent: 'space-around',
             }}
         >
+            <Box sx={{ pt: '10vh' }}>
+                <Image
+                    alt='Логотип'
+                    src={logo}
+                    style={{
+                        objectFit: 'contain',
+                        height: 'min-content',
+                        width: '100%',
+                        maxWidth: '500px',
+                    }}
+                />
+            </Box>
             <Image
-                src={logo}
-                style={{
-                    objectFit: 'contain',
-                    height: 'min-content',
-                    width: '100%',
-                    maxWidth: '300px'
-                }}
-            />
-            <Image
+                alt='Стартовое фото дети'
                 src={kids}
                 style={{
                     objectFit: 'contain',
                     width: '100%',
                     height: 'min-content',
                     borderRadius: '100%',
-                    margin: '30px 0 30px 0',
-                    maxWidth: '300px'
+                    maxWidth: '40vh'
                 }}
             />
-            <Box>
+            <Box sx={{ my: 2 }}>
                 <Title>Какой-то текст</Title>
                 <Typography textAlign='center' sx={{ mt: 1, width: '70%', mx: 'auto' }}>
-                    Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+                    Давно выяснено, что при оценке дизайна.
                 </Typography>
             </Box>
             <Button
+                variant='contained'
                 sx={{
-                    mt: 3,
-                    bgcolor: '#59B376',
-                    color: 'black',
-                    borderRadius: '10px',
-                    fontSize: '12px',
                     px: 2,
-                    py: '10px'
+                    py: '10px',
+                    mb: 2
                 }}
             >
                 Записаться на пробное занятие

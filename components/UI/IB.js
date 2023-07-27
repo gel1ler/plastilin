@@ -1,17 +1,18 @@
 import React from 'react'
 import { IconButton } from '@mui/material'
 
-const IB = ({ children }) => {
+const IB = ({ children, f, sx }) => {
+    const defaultStyle = {
+        color: 'black',
+    }
+    const style = sx ? Object.assign(defaultStyle, sx) : defaultStyle
     return (
         <IconButton
-            size='large'
-            sx={{
-                color: 'rgb(0,0,0)',
-                
-            }}
+            sx={style}
+            onClick={f}
         >
             {children}
-        </IconButton>
+        </IconButton >
     )
 }
 

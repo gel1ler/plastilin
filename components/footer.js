@@ -5,28 +5,23 @@ const Footer = () => {
     return (
         <Box
             sx={{
-                width: '100vw',
-                bgcolor: '#D9D9D9',
-                height: '50vh',
+                bgcolor: 'secondary.main',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                flexDirection: 'column',
+                gap: 3,
+                py:2,
+                width: '100%'
             }}
         >
-            <Box
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    height: '100%'
-                }}
-            >
-                <Box>
-                    asdf
-                </Box>
-                <Typography textAlign='center' >
-                    ©2023 Абаничев Александр <br />
-                    Все права защищены
-                </Typography>
+            <Box>
+                asdf
             </Box>
+            <Typography textAlign='center' >
+                ©2023 Абаничев Александр <br />
+                Все права защищены
+            </Typography>
         </Box>
     )
 }
