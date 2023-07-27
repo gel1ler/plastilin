@@ -10,24 +10,31 @@ const About = () => {
             id='about'
             sx={{
                 height: '100vh',
-                pt: '80px'
+                overflow: 'hidden',
+                pt: '80px',
             }}
         >
-            <Title>О нас</Title>
             <Box
                 sx={{
-                    display: 'grid',
-                    gridTemplate: '1fr/1fr 1fr',
-                    my: 2
+                    display: 'flex',
+                    my: 2,
                 }}
             >
-                <Typography>
-                    Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
-                </Typography>
+                <Box sx={{ width: '50vw' }}>
+                    <Title>О нас</Title>
+                    <Typography variant='h5' sx={{ mt: 2, fontSize: '23px' }}>
+                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+                    </Typography>
+                </Box>
                 <Image
                     src={kids}
                     alt='Фото дети'
-                    style={{ objectFit: 'contain', height: 'auto', width: '100%', }}
+                    style={{
+                        width: '100%',
+                        height: 'auto',
+                        maxHeight: '400px'
+                        
+                    }}
                 />
             </Box>
         </Box>

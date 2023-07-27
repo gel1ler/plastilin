@@ -38,6 +38,7 @@ const Header = () => {
                 zIndex: 999,
                 transition: 'box-shadow .2s ease-out',
                 display: 'flex',
+                alignItems: 'center',
                 px: [1, 2, 3, 4]
             }}
             className={isActive ? 'shadow' : null}
@@ -56,7 +57,6 @@ const Header = () => {
                 <IB><Instagram sx={{ fontSize: [25, 30] }} /></IB>
                 <IB><WhatsApp sx={{ fontSize: [25, 30] }} /></IB>
                 <IB><Telegram sx={{ fontSize: [25, 30] }} /></IB>
-
             </Box>
             <Box
                 sx={{

@@ -3,10 +3,7 @@ import { Typography } from '@mui/material'
 
 const Title = ({ children }) => {
     return (
-        <Typography
-            variant="h4"
-            textAlign='center'
-        >
+        <Typography variant="h3">
             {children}
         </Typography>
     )
