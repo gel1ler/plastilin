@@ -13,3 +13,22 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.column-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.column-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.column-around {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}

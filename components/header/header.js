@@ -1,15 +1,14 @@
 'use client'
-import { Box, IconButton } from '@mui/material'
+import { Box } from '@mui/material'
 import React, { useState, useEffect } from 'react'
-import { Instagram, Telegram, Phone, Menu } from '@mui/icons-material'
+import { Menu } from '@mui/icons-material'
 import IB from '../UI/IB'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import logo from '../../public/logo-gorizontal.svg'
 import Image from 'next/image'
-import Link from 'next/link'
 import MyDrawer from './drawer'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { InstagramIcon, TelegramIcon, VkIcon } from '../icons'
+import { InstagramIcon, PhoneIcon, TelegramIcon, VkIcon } from '../icons'
 
 const Header = () => {
     const [height, setHeight] = useState()
@@ -54,7 +53,7 @@ const Header = () => {
                     transition: 'all .2s ease-out',
                     transform: isActive ? 'translateX(-100%)' : null,
                     p: 1,
-                    gap: [0, 1]
+                    gap: 1
                 }}
             >
                 <InstagramIcon />
@@ -87,12 +86,12 @@ const Header = () => {
                 sx={{
                     display: 'flex',
                     ml: 'auto',
-                    gap: [0, 1],
+                    gap: 1,
                     p: 1
                 }}
             >
-                <IB><Phone sx={{ fontSize: [25, 30] }} /></IB>
-                <IB f={() => setOpen(true)}><Menu sx={{ fontSize: [25, 30] }} /></IB>
+                <PhoneIcon />
+                <IB f={() => setOpen(true)}><Menu sx={{ fontSize: 30 }} /></IB>
             </Box>
         </Box>
     )

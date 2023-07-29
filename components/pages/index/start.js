@@ -10,13 +10,10 @@ const Start = () => {
     return (
         <Box
             id='home'
+            className='column-around'
             sx={{
                 height: '100vh',
                 mx: 'auto',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'space-around',
             }}
         >
             <Box sx={{ pt: '10vh' }}>

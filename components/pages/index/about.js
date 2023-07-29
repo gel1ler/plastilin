@@ -1,38 +1,46 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, useMediaQuery } from '@mui/material'
 import Title from '@/components/UI/title'
 import Image from 'next/image'
 import kids from '../../../public/cloud-kids.png'
+import halfKids from '../../../public/cloud-kids-half.png'
+import { useTheme } from '@mui/material/styles'
 
 const About = () => {
+    const theme = useTheme()
+    const isLargeScreen = useMediaQuery(theme.breakpoints.up('md'))
+    console.log(isLargeScreen)
     return (
         <Box
             id='about'
             sx={{
                 overflow: 'hidden',
+                width: '100vw'
             }}
         >
             <Box
                 sx={{
-                    display: 'flex',
+                    display: 'grid',
+                    gridTemplate: '1fr/1fr 1fr',
                     my: 2,
+                    gap:2
                 }}
             >
-                <Box sx={{ width: '50vw' }}>
+                <Box sx={{pl: 2}}>
                     <Title>О нас</Title>
                     <Typography variant='h5' sx={{ mt: 2, fontSize: '23px' }}>
                         Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
                     </Typography>
                 </Box>
                 <Image
-                    src={kids}
+                    src={isLargeScreen ? kids : halfKids}
                     alt='Фото дети'
                     style={{
-                        width: '100%',
+                        width: 'min-content',
                         height: 'auto',
                         maxHeight: '400px',
                         objectFit: 'contain',
-                        filter: 'drop-shadow(-2px 0px 10px #EFDAA8)'
+                        justifySelf: 'end'
                     }}
                 />
             </Box>

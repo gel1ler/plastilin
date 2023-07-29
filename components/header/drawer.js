@@ -5,7 +5,7 @@ import { Close } from '@mui/icons-material'
 import IB from '../UI/IB'
 import Link from 'next/link'
 import Menu from './menu'
-import { InstagramIcon, VkIcon, TelegramIcon, PhoneIcon, CloseIcon } from '../icons'
+import { InstagramIcon, VkIcon, TelegramIcon } from '../icons'
 
 const MyDrawer = ({ open, setOpen }) => {
     const theme = useTheme()
@@ -20,44 +20,47 @@ const MyDrawer = ({ open, setOpen }) => {
                     position: 'relative',
                     bgcolor: 'secondary.main',
                     color: 'white',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between'
                 }}
             >
-                <IB
-                    f={() => setOpen(false)}
-                    sx={{
-                        position: 'absolute',
-                        right: 10,
-                        top: 10,
-                    }}
-                >
-                    <Close sx={{ fontSize: '35px' }} />
-                </IB>
-                <Menu close={() => setOpen(false)} />
                 <Box
+                    className='column-between'
                     sx={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        p: 2
+                        height: '100svh',
                     }}
                 >
-                    <Box
+                    <IB
+                        f={() => setOpen(false)}
                         sx={{
-                            display: 'flex',
-                            gap: [0, 1],
-
+                            position: 'absolute',
+                            right: 10,
+                            top: 10,
                         }}
                     >
-                        <InstagramIcon />
-                        <VkIcon />
-                        <TelegramIcon />
+                        <Close sx={{ fontSize: '35px' }} />
+                    </IB>
+                    <Menu close={() => setOpen(false)} />
+                    <Box
+                        className='column-centered'
+                        sx={{
+                            p: 2
+                        }}
+                    >
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: 1,
+
+                            }}
+                        >
+                            <InstagramIcon />
+                            <VkIcon />
+                            <TelegramIcon />
+                        </Box>
+                        <Typography variant='h6' color='black' sx={{ fontWeight: 'bold', textDecoration: 'underline' }}>
+                            <a href='tel:+7(916)868-87-88'>+7 (916) 868-87-88</a>
+                        </Typography>
                     </Box>
-                    <Typography color='black' sx={{ fontWeight: 'bold', textDecoration: 'underline' }}>
-                        <a href='tel:+7(916)868-87-88'>+7 (916) 868-87-88</a>
-                    </Typography>
                 </Box>
             </Box>
         </Drawer >

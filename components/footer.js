@@ -4,14 +4,12 @@ import { Box, Typography } from '@mui/material'
 const Footer = () => {
     return (
         <Box
+            className='column-centered'
             sx={{
                 bgcolor: 'secondary.main',
-                display: 'flex',
-                alignItems: 'center',
                 justifyContent: 'space-between',
-                flexDirection: 'column',
                 gap: 3,
-                py:2,
+                py: 2,
                 width: '100%'
             }}
         >

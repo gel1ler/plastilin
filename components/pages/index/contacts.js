@@ -17,10 +17,8 @@ const Contacts = () => {
       }}
     >
       <Box
+        className='column-centered'
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
           gap: 1,
           width: '100%'
         }}
@@ -37,8 +35,8 @@ const Contacts = () => {
         </Typography>
         <iframe
           src="https://yandex.ru/map-widget/v1/?ll=38.230160%2C55.577847&mode=whatshere&whatshere%5Bpoint%5D=38.230161%2C55.577846&whatshere%5Bzoom%5D=17&z=16"
-          frameborder="0"
-          allowfullscreen="true"
+          frameBorder={0}
+          allowFullScreen={true}
           style={{
             width: '100%',
             height: '100%',
@@ -49,10 +47,8 @@ const Contacts = () => {
         />
       </Box>
       <Box
+        className='column-centered'
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
           gap: 2,
           height: 'max-content'
         }}
