@@ -9,9 +9,7 @@ const About = () => {
         <Box
             id='about'
             sx={{
-                height: '100vh',
                 overflow: 'hidden',
-                pt: '80px',
             }}
         >
             <Box
@@ -32,8 +30,9 @@ const About = () => {
                     style={{
                         width: '100%',
                         height: 'auto',
-                        maxHeight: '400px'
-                        
+                        maxHeight: '400px',
+                        objectFit: 'contain',
+                        filter: 'drop-shadow(-2px 0px 10px #EFDAA8)'
                     }}
                 />
             </Box>

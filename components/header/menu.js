@@ -2,10 +2,11 @@ import React from 'react'
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { Box, Typography } from '@mui/material'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const navLinks = [
     {
-        href: '/#home',
+        href: '#home',
         name: 'Главная'
     },
     {
@@ -39,7 +40,7 @@ const Menu = ({close}) => {
                 const isActive = pathname.startsWith(link.href)
                 console.log(isActive)
                 return (
-                    <Link href={link.href} key={link.name} style={{ textDecoration: 'none' }}>
+                    <AnchorLink offset='100' href={link.href} key={link.name} style={{ textDecoration: 'none' }}>
                         <Typography
                             variant='h4'
                             sx={{
@@ -49,7 +50,7 @@ const Menu = ({close}) => {
                         >
                             {link.name}
                         </Typography>
-                    </Link>
+                    </AnchorLink>
                 )
             })}
         </Box>

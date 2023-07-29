@@ -1,13 +1,15 @@
 'use client'
 import { Box, IconButton } from '@mui/material'
 import React, { useState, useEffect } from 'react'
-import { Instagram, WhatsApp, Telegram, Phone, Menu } from '@mui/icons-material'
+import { Instagram, Telegram, Phone, Menu } from '@mui/icons-material'
 import IB from '../UI/IB'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import logo from '../../public/logo-gorizontal.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import MyDrawer from './drawer'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { InstagramIcon, TelegramIcon, VkIcon } from '../icons'
 
 const Header = () => {
     const [height, setHeight] = useState()
@@ -48,15 +50,16 @@ const Header = () => {
                 sx={{
                     position: 'absolute',
                     display: 'flex',
+                    alignItems: 'center',
                     transition: 'all .2s ease-out',
                     transform: isActive ? 'translateX(-100%)' : null,
                     p: 1,
                     gap: [0, 1]
                 }}
             >
-                <IB><Instagram sx={{ fontSize: [25, 30] }} /></IB>
-                <IB><WhatsApp sx={{ fontSize: [25, 30] }} /></IB>
-                <IB><Telegram sx={{ fontSize: [25, 30] }} /></IB>
+                <InstagramIcon />
+                <VkIcon />
+                <TelegramIcon />
             </Box>
             <Box
                 sx={{
@@ -72,13 +75,13 @@ const Header = () => {
                     height: 'min-content',
                 }}
             >
-                <Link href='/'>
+                <AnchorLink href='#home'>
                     <Image
                         alt='Логотип'
                         src={logo}
                         style={{ objectFit: 'contain', height: '38px', width: 'min-content', display: 'block' }}
                     />
-                </Link>
+                </AnchorLink>
             </Box>
             <Box
                 sx={{

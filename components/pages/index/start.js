@@ -4,6 +4,7 @@ import Image from 'next/image'
 import logo from '../../../public/logo-gorizontal.svg'
 import kids from '../../../public/start-kids.png'
 import Title from '@/components/UI/title'
+import MyButton from '@/components/UI/button'
 
 const Start = () => {
     return (
@@ -47,16 +48,7 @@ const Start = () => {
                     Давно выяснено, что при оценке дизайна.
                 </Typography>
             </Box>
-            <Button
-                variant='contained'
-                sx={{
-                    px: 2,
-                    py: '10px',
-                    mb: 2
-                }}
-            >
-                Записаться на пробное занятие
-            </Button>
+            <MyButton />
         </Box>
     )
 }

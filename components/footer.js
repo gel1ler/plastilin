@@ -16,7 +16,6 @@ const Footer = () => {
             }}
         >
             <Box>
-                asdf
             </Box>
             <Typography textAlign='center' >
                 ©2023 Абаничев Александр <br />
