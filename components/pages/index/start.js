@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Typography, Button } from '@mui/material'
 import Image from 'next/image'
 import logo from '../../../public/logo-gorizontal.svg'
-import kids from '../../../public/start-kids.png'
+import kids from '../../../public/start-kids.jpg'
 import Title from '@/components/UI/title'
 import MyButton from '@/components/UI/button'
 

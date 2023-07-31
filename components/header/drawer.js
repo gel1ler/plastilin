@@ -5,7 +5,7 @@ import { Close } from '@mui/icons-material'
 import IB from '../UI/IB'
 import Link from 'next/link'
 import Menu from './menu'
-import { InstagramIcon, VkIcon, TelegramIcon } from '../icons'
+import { InstagramIcon, VkIcon, TelegramIcon, PhoneCall } from '../icons'
 
 const MyDrawer = ({ open, setOpen }) => {
     const theme = useTheme()
@@ -57,9 +57,7 @@ const MyDrawer = ({ open, setOpen }) => {
                             <VkIcon />
                             <TelegramIcon />
                         </Box>
-                        <Typography variant='h6' color='black' sx={{ fontWeight: 'bold', textDecoration: 'underline' }}>
-                            <a href='tel:+7(916)868-87-88'>+7 (916) 868-87-88</a>
-                        </Typography>
+                        <PhoneCall />
                     </Box>
                 </Box>
             </Box>

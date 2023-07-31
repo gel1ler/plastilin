@@ -28,7 +28,6 @@ export const InstagramIcon = () => {
                     </Typography>
                     <Button color='primary' variant='contained' onClick={() => setOpen(false)}>
                         <Link href='https://instagram.com/plastilin_ram?igshid=NTc4MTIwNjQ2YQ==' target='_blank'>
-
                             VPN включен
                         </Link>
                     </Button>
@@ -43,8 +42,60 @@ export const InstagramIcon = () => {
     )
 }
 export const TelegramIcon = () => { return (<IB href='https://t.me/plastilin_ram'><Telegram sx={style} /></IB>) }
-export const PhoneIcon = () => { return (<IB tel href='tel:+7(916)868-87-88'><Phone sx={style} /></IB>) }
+
+export const PhoneCall = ({ icon, text }) => {
+    const [open, setOpen] = useState(false)
+
+    return (
+        <>
+            <Dialog
+                open={open}
+                onClose={() => setOpen(false)}
+            >
+                <Box
+                    className='column-centered'
+                    sx={{
+                        px: 3,
+                        py: 5,
+                        gap: 3
+                    }}
+                >
+                    <Link href='tel:+7(916)868-87-88' target='_blank'>
+                        <Typography variant='h6' sx={{ textDecoration: 'underline', display: 'flex', alignItems: 'center', gap: 1 }}>
+                            <Phone fontSize='large' />
+                            Вызов на мобильный
+                        </Typography>
+                    </Link>
+                    <Link href="https://wa.me/79168688788" target="_blank">
+                        <Typography variant='h6' sx={{ textDecoration: 'underline', display: 'flex', alignItems: 'center', gap: 1 }}>
+                            <WhatsApp fontSize='large' />
+                            WhatsApp чат
+                        </Typography>
+                    </Link>
+                </Box>
+            </Dialog>
+            {icon ?
+                <IB f={() => setOpen(true)}><Phone sx={style} /></IB>
+                :
+                <Typography
+                    onClick={() => setOpen(true)}
+                    variant={text ? '' : 'h6'}
+                    color='black'
+                    sx={{
+                        fontWeight: 'bold',
+                        textDecoration: 'underline'
+                    }}
+                >
+                    +7(916)868-87-88
+                </Typography>
+
+            }
+        </>
+    )
+}
+
 export const MenuIcon = () => { return (<IB><Menu sx={style} /></IB>) }
+
 export const VkIcon = () => {
     return (
         <IB href='https://vk.com/plastilin.centr'>

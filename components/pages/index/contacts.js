@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, TextField, Typography } from '@mui/material'
 import MyButton from '@/components/UI/button'
 import Link from 'next/link'
+import { PhoneCall } from '@/components/icons'
 
 const Contacts = () => {
   return (
@@ -13,7 +14,8 @@ const Contacts = () => {
         gap: '50px',
         justifyItems: 'center',
         py: 4,
-        px: 2
+        px: 2,
+        mb: '20vh'
       }}
     >
       <Box
@@ -25,7 +27,7 @@ const Contacts = () => {
       >
         <Typography variant='h4' textAlign='center'>Контакты</Typography>
         <Typography textAlign='center'>
-          Номер телефона: +7(900)000-00-00
+          Номер телефона: <PhoneCall text />
         </Typography>
         <Typography textAlign='center' sx={{ mb: 2 }}>
           Адрес:{' '}
@@ -50,7 +52,7 @@ const Contacts = () => {
         className='column-centered'
         sx={{
           gap: 2,
-          height: 'max-content'
+          height: 'max-content',
         }}
       >
         <Typography variant='h4' textAlign='center'>Оставьте свою заявку</Typography>

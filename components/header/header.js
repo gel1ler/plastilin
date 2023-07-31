@@ -8,7 +8,7 @@ import logo from '../../public/logo-gorizontal.svg'
 import Image from 'next/image'
 import MyDrawer from './drawer'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { InstagramIcon, PhoneIcon, TelegramIcon, VkIcon } from '../icons'
+import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '../icons'
 
 const Header = () => {
     const [height, setHeight] = useState()
@@ -90,7 +90,7 @@ const Header = () => {
                     p: 1
                 }}
             >
-                <PhoneIcon />
+                <PhoneCall icon />
                 <IB f={() => setOpen(true)}><Menu sx={{ fontSize: 30 }} /></IB>
             </Box>
         </Box>

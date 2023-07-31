@@ -2,14 +2,14 @@ import React from 'react'
 import { IconButton } from '@mui/material'
 import Link from 'next/link'
 
-const IB = ({ children, f, sx, href, tel }) => {
+const IB = ({ children, f, sx, href }) => {
     const defaultStyle = {
         color: 'black',
     }
     const style = sx ? Object.assign(defaultStyle, sx) : defaultStyle
     return (
         href ?
-            <a href={href} target={tel ? 'self' : '_blank'}>
+            <a href={href} target='_blank'>
                 <IconButton
                     sx={style}
                 >
