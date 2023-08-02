@@ -1,5 +1,6 @@
 'use client'
-import { Box } from '@mui/material'
+import { Box, useMediaQuery } from '@mui/material'
+import { useTheme } from '@mui/material/styles'
 import React, { useState, useEffect } from 'react'
 import { Menu } from '@mui/icons-material'
 import IB from '../UI/IB'
@@ -11,9 +12,11 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '../icons'
 
 const Header = () => {
+    const theme = useTheme()
+    const isXLargeScreen = useMediaQuery(theme.breakpoints.up('lg'))
+    const [open, setOpen] = useState(false)
     const [height, setHeight] = useState()
     const [isActive, setIsActive] = useState(false)
-    const [open, setOpen] = useState(false)
 
     useEffect(() =>
         setHeight(window.innerHeight)
@@ -29,72 +32,145 @@ const Header = () => {
         }
     })
 
-    return (
-        <Box
-            sx={{
-                left: 0,
-                right: 0,
-                position: 'fixed',
-                bgcolor: 'white',
-                zIndex: 999,
-                transition: 'box-shadow .2s ease-out',
-                display: 'flex',
-                alignItems: 'center',
-                px: [1, 2, 3, 4]
-            }}
-            className={isActive ? 'shadow' : null}
-        >
-            <MyDrawer open={open} setOpen={setOpen} />
+    if (isXLargeScreen) {
+        return (
             <Box
                 sx={{
-                    position: 'absolute',
+                    left: 0,
+                    right: 0,
+                    position: 'fixed',
+                    bgcolor: 'white',
+                    zIndex: 999,
+                    transition: 'box-shadow .2s ease-out',
+                    height: '70px'
+                }}
+                className={isActive ? 'shadow' : null}
+            >
+                <Box
+                    sx={{
+                        maxWidth: '1200px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        mx: 'auto'
+                    }}
+                >
+
+                    <MyDrawer open={open} setOpen={setOpen} />
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            p: 1,
+                            gap: 1
+                        }}
+                    >
+                        <InstagramIcon />
+                        <VkIcon />
+                        <TelegramIcon />
+                    </Box>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            transition: 'all .4s ease-out',
+                            position: 'relative',
+                            my: 1,
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            height: 'min-content',
+                        }}
+                    >
+                        <AnchorLink href='#home'>
+                            <Image
+                                alt='Логотип'
+                                src={logo}
+                                style={{ objectFit: 'contain', height: '48px', width: 'min-content', display: 'block' }}
+                            />
+                        </AnchorLink>
+                    </Box>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            gap: 1,
+                            p: 1
+                        }}
+                    >
+                        <PhoneCall icon />
+                        <IB f={() => setOpen(true)}><Menu sx={{ fontSize: 30 }} /></IB>
+                    </Box>
+                </Box>
+            </Box>
+        )
+    }
+    else {
+        return (
+            <Box
+                sx={{
+                    left: 0,
+                    right: 0,
+                    position: 'fixed',
+                    bgcolor: 'white',
+                    zIndex: 999,
+                    transition: 'box-shadow .2s ease-out',
                     display: 'flex',
                     alignItems: 'center',
-                    transition: 'all .2s ease-out',
-                    transform: isActive ? 'translateX(-100%)' : null,
-                    p: 1,
-                    gap: 1
+                    px: [1, 2, 3, 4],
                 }}
+                className={isActive ? 'shadow' : null}
             >
-                <InstagramIcon />
-                <VkIcon />
-                <TelegramIcon />
+                <MyDrawer open={open} setOpen={setOpen} />
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        display: 'flex',
+                        alignItems: 'center',
+                        transition: 'all .2s ease-out',
+                        transform: isActive ? 'translateX(-100%)' : null,
+                        p: 1,
+                        gap: 1
+                    }}
+                >
+                    <InstagramIcon />
+                    <VkIcon />
+                    <TelegramIcon />
+                </Box>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        transition: 'all .4s ease-out',
+                        transform: isActive ? null : 'translateY(-200%)',
+                        position: 'relative',
+                        ml: 2,
+                        my: 1,
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        height: 'min-content',
+                    }}
+                >
+                    <AnchorLink href='#home'>
+                        <Image
+                            alt='Логотип'
+                            src={logo}
+                            style={{ objectFit: 'contain', height: '38px', width: 'min-content', display: 'block' }}
+                        />
+                    </AnchorLink>
+                </Box>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        ml: 'auto',
+                        gap: 1,
+                        p: 1
+                    }}
+                >
+                    <PhoneCall icon />
+                    <IB f={() => setOpen(true)}><Menu sx={{ fontSize: 30 }} /></IB>
+                </Box>
             </Box>
-            <Box
-                sx={{
-                    display: 'flex',
-                    transition: 'all .4s ease-out',
-                    transform: isActive ? null : 'translateY(-200%)',
-                    position: 'relative',
-                    ml: 2,
-                    my: 1,
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    height: 'min-content',
-                }}
-            >
-                <AnchorLink href='#home'>
-                    <Image
-                        alt='Логотип'
-                        src={logo}
-                        style={{ objectFit: 'contain', height: '38px', width: 'min-content', display: 'block' }}
-                    />
-                </AnchorLink>
-            </Box>
-            <Box
-                sx={{
-                    display: 'flex',
-                    ml: 'auto',
-                    gap: 1,
-                    p: 1
-                }}
-            >
-                <PhoneCall icon />
-                <IB f={() => setOpen(true)}><Menu sx={{ fontSize: 30 }} /></IB>
-            </Box>
-        </Box>
-    )
+        )
+    }
 }
 
 export default Header

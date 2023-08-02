@@ -10,12 +10,16 @@ const Contacts = () => {
       id='contacts'
       sx={{
         display: 'grid',
-        gridTemplateRows: '2fr 1fr',
+        gridTemplateRows: ['2fr 1fr', '2fr 1fr', '2fr 1fr', '1fr'],
+        gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr'],
         gap: '50px',
         justifyItems: 'center',
+        alignItems: 'center',
         py: 4,
         px: 2,
-        mb: '20vh'
+        mb: '20vh',
+        width: ['90%','80%','100%'],
+        maxWidth: '1200px'
       }}
     >
       <Box
@@ -51,7 +55,7 @@ const Contacts = () => {
       <Box
         className='column-centered'
         sx={{
-          gap: 2,
+          gap: [2,2,2,3],
           height: 'max-content',
         }}
       >

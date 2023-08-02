@@ -9,13 +9,14 @@ import { useTheme } from '@mui/material/styles'
 const About = () => {
     const theme = useTheme()
     const isLargeScreen = useMediaQuery(theme.breakpoints.up('md'))
-    console.log(isLargeScreen)
+
     return (
         <Box
             id='about'
             sx={{
                 overflow: 'hidden',
-                width: '100vw'
+                width: ['100vw','100vw','100vw','1200px'],
+
             }}
         >
             <Box
