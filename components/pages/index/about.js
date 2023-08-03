@@ -9,14 +9,15 @@ import { useTheme } from '@mui/material/styles'
 const About = () => {
     const theme = useTheme()
     const isLargeScreen = useMediaQuery(theme.breakpoints.up('md'))
+    const isXLargeScreen = useMediaQuery(theme.breakpoints.up('lg'))
 
     return (
         <Box
             id='about'
             sx={{
                 overflow: 'hidden',
-                width: ['100vw','100vw','100vw','1200px'],
-
+                width: ['100vw', '100vw', '100vw', '1200px'],
+                height: '90vh'
             }}
         >
             <Box
@@ -24,14 +25,29 @@ const About = () => {
                     display: 'grid',
                     gridTemplate: '1fr/1fr 1fr',
                     my: 2,
-                    gap:2
+                    gap: 2
                 }}
             >
-                <Box sx={{pl: 2}}>
+                <Box sx={{ pl: 2 }}>
                     <Title>О нас</Title>
-                    <Typography variant='h5' sx={{ mt: 2, fontSize: '23px' }}>
+                    <Typography data-aos='fade-up' variant='h5' sx={{ mt: 2, fontSize: '23px' }}>
                         Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
                     </Typography>
+                    <Box
+                        sx={{
+                            bgcolor: 'secondary.main',
+                            px: 2,
+                            py: 4,
+                            borderRadius: '20px',
+                            width: '70%',
+                            mt:5
+                        }}
+                        data-aos='fade-up'
+                    >
+                        <Typography data-aos='fade-up' variant='subtitle1' sx={{ fontSize: '23px', fontStyle: 'italic' }}>
+                            "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+                        </Typography>
+                    </Box>
                 </Box>
                 <Image
                     src={isLargeScreen ? kids : halfKids}
@@ -39,10 +55,11 @@ const About = () => {
                     style={{
                         width: 'min-content',
                         height: 'auto',
-                        maxHeight: '400px',
+                        maxHeight: isXLargeScreen ? '600px' : '400px',
                         objectFit: 'contain',
                         justifySelf: 'end'
                     }}
+                    data-aos='fade-up'
                 />
             </Box>
         </Box>

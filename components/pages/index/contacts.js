@@ -18,7 +18,7 @@ const Contacts = () => {
         py: 4,
         px: 2,
         mb: '20vh',
-        width: ['90%','80%','100%'],
+        width: ['90%', '80%', '100%'],
         maxWidth: '1200px'
       }}
     >
@@ -29,11 +29,11 @@ const Contacts = () => {
           width: '100%'
         }}
       >
-        <Typography variant='h4' textAlign='center'>Контакты</Typography>
-        <Typography textAlign='center'>
+        <Typography data-aos='fade-right' variant='h4' textAlign='center'>Контакты</Typography>
+        <Typography data-aos='fade-right' textAlign='center'>
           Номер телефона: <PhoneCall text />
         </Typography>
-        <Typography textAlign='center' sx={{ mb: 2 }}>
+        <Typography data-aos='fade-right' textAlign='center' sx={{ mb: 2 }}>
           Адрес:{' '}
           <Link href='https://yandex.ru/maps/10750/ramenskoe/house/ulitsa_svobody_6a/Z0EYdARgSEMGQFtvfXl2dnRnYg==/?ll=38.230160%2C55.577847&utm_medium=mapframe&utm_source=maps&z=17"'>
             г. Раменское, ул. Свободы, д. 6А
@@ -50,23 +50,26 @@ const Contacts = () => {
             maxHeight: '60vh',
             boxShadow: '2px 2px 10px 5px rgba(0,0,0,0.2)',
           }}
+          data-aos='fade-right'
         />
       </Box>
       <Box
         className='column-centered'
         sx={{
-          gap: [2,2,2,3],
+          gap: [2, 2, 2, 3],
           height: 'max-content',
         }}
       >
-        <Typography variant='h4' textAlign='center'>Оставьте свою заявку</Typography>
+        <Typography data-aos='fade-left' variant='h4' textAlign='center'>Оставьте свою заявку</Typography>
         <TextField
+          data-aos='fade-left'
           label='Имя'
           sx={{
             width: '100%',
           }}
         />
         <TextField
+          data-aos='fade-left'
           label='Номер телефона'
           sx={{
             width: '100%',

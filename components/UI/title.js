@@ -3,7 +3,7 @@ import { Typography } from '@mui/material'
 
 const Title = ({ children }) => {
     return (
-        <Typography variant="h3">
+        <Typography variant="h3" data-aos='fade-up'>
             {children}
         </Typography>
     )

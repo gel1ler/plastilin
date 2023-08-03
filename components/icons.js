@@ -83,7 +83,8 @@ export const PhoneCall = ({ icon, text }) => {
                     color='black'
                     sx={{
                         fontWeight: 'bold',
-                        textDecoration: 'underline'
+                        textDecoration: 'underline',
+                        cursor: 'pointer'
                     }}
                 >
                     +7(916)868-87-88

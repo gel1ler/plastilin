@@ -6,6 +6,10 @@ import { ThemeProvider, createTheme } from '@mui/material/styles'
 import Header from '@/components/header/header'
 import Footer from '@/components/footer'
 import Contacts from '@/components/pages/index/contacts'
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react'
+import Aos from 'aos'
 
 const theme = createTheme({
   typography: {
@@ -38,6 +42,10 @@ const theme = createTheme({
 })
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init()
+    AOS.refresh()
+  }, [])
   return (
     <ThemeProvider theme={theme}>
       <Header />

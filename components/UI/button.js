@@ -10,6 +10,7 @@ const MyButton = () => {
                 py: '10px',
                 mb: 2
             }}
+            data-aos='fade-up'
         >
             Записаться на пробное занятие
         </Button>
