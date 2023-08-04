@@ -22,6 +22,7 @@ const MyDrawer = ({ open, setOpen }) => {
                 }}
             >
                 <Box
+                className='column-between'
                     sx={{
                         height: '100svh',
                         position: 'relative',
@@ -42,11 +43,11 @@ const MyDrawer = ({ open, setOpen }) => {
                         className='column-centered'
                         sx={{
                             p: 2,
-                            position: 'fixed',
+                            position: ['fixed', 'static'],
                             left: 0,
                             right: 0,
                             mx: 'auto',
-                            bottom: 0,
+                            bottom: 10,
                         }}
                     >
                         <Box
