@@ -3,7 +3,6 @@ import { useTheme } from '@mui/material/styles'
 import { Drawer, Box, useMediaQuery, Typography } from '@mui/material'
 import { Close } from '@mui/icons-material'
 import IB from '../UI/IB'
-import Link from 'next/link'
 import Menu from './menu'
 import { InstagramIcon, VkIcon, TelegramIcon, PhoneCall } from '../icons'
 
@@ -23,9 +22,9 @@ const MyDrawer = ({ open, setOpen }) => {
                 }}
             >
                 <Box
-                    className='column-between'
                     sx={{
                         height: '100svh',
+                        position: 'relative',
                     }}
                 >
                     <IB
@@ -42,7 +41,12 @@ const MyDrawer = ({ open, setOpen }) => {
                     <Box
                         className='column-centered'
                         sx={{
-                            p: 2
+                            p: 2,
+                            position: 'fixed',
+                            left: 0,
+                            right: 0,
+                            mx: 'auto',
+                            bottom: 0,
                         }}
                     >
                         <Box

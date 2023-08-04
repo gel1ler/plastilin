@@ -43,7 +43,9 @@ const theme = createTheme({
 
 export default function Home() {
   useEffect(() => {
-    AOS.init()
+    AOS.init({
+      anchorPlacement: 'bottom-bottom'
+    })
     AOS.refresh()
   }, [])
   return (

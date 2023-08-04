@@ -25,7 +25,7 @@ const About = () => {
                     display: 'grid',
                     gridTemplate: '1fr/1fr 1fr',
                     my: 2,
-                    gap: 2
+                    gap :2
                 }}
             >
                 <Box sx={{ pl: 2 }}>
@@ -40,12 +40,13 @@ const About = () => {
                             py: 4,
                             borderRadius: '20px',
                             width: '70%',
-                            mt:5
+                            mt:5,
+                            display: ['none', 'block']
                         }}
                         data-aos='fade-up'
                     >
-                        <Typography data-aos='fade-up' variant='subtitle1' sx={{ fontSize: '23px', fontStyle: 'italic' }}>
-                            "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+                        <Typography data-aos='fade-up' sx={{ fontStyle: 'italic', fontWeight: 'bold', fontSize :23 }}>
+                            "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться."
                         </Typography>
                     </Box>
                 </Box>

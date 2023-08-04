@@ -55,7 +55,6 @@ const BigScreen = () => {
                     height: '95%',
                     overflow: 'hidden',
                     borderRadius: '50px',
-                    mt: 1,
                     position: 'relative',
                 }}
             >

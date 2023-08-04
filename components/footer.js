@@ -15,7 +15,7 @@ const Footer = () => {
         >
             <Box>
             </Box>
-            <Typography textAlign='center' data-aos='fade-up'>
+            <Typography textAlign='center'>
                 ©2023 Абаничев Александр <br />
                 Все права защищены
             </Typography>

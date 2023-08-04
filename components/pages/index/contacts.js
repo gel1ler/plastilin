@@ -15,8 +15,6 @@ const Contacts = () => {
         gap: '50px',
         justifyItems: 'center',
         alignItems: 'center',
-        py: 4,
-        px: 2,
         mb: '20vh',
         width: ['90%', '80%', '100%'],
         maxWidth: '1200px'
@@ -48,6 +46,7 @@ const Contacts = () => {
             height: '100%',
             minHeight: '40vh',
             maxHeight: '60vh',
+            maxWidth: '600px',
             boxShadow: '2px 2px 10px 5px rgba(0,0,0,0.2)',
           }}
           data-aos='fade-right'
@@ -60,22 +59,22 @@ const Contacts = () => {
           height: 'max-content',
         }}
       >
-        <Typography data-aos='fade-left' variant='h4' textAlign='center'>Оставьте свою заявку</Typography>
+        <Typography data-aos='fade-up' variant='h4' textAlign='center'>Оставьте свою заявку</Typography>
         <TextField
-          data-aos='fade-left'
+          data-aos='fade-up'
           label='Имя'
           sx={{
             width: '100%',
           }}
         />
         <TextField
-          data-aos='fade-left'
+          data-aos='fade-up'
           label='Номер телефона'
           sx={{
             width: '100%',
           }}
         />
-        <MyButton />
+        <MyButton anim />
       </Box>
     </Box >
   )
