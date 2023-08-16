@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import React from 'react'
 
-const Dots = ({ current, length }) => {
+const Dots = ({ current, length, setCurrent }) => {
     return (
         <Box
             sx={{
@@ -20,8 +20,10 @@ const Dots = ({ current, length }) => {
                 const active = current == key
                 return (
                     <Box
+                        onClick={()=>setCurrent(key)}
                         key={key}
                         sx={{
+                            cursor: 'pointer',
                             width: active ? '30px' : '10px',
                             height: '10px',
                             borderRadius: active ? '10px' : '50%',

@@ -17,7 +17,8 @@ const About = () => {
             sx={{
                 overflow: 'hidden',
                 width: ['100vw', '100vw', '100vw', '1200px'],
-                height: '90vh'
+                minHeight: '90vh',
+                minWidth: '370px'
             }}
         >
             <Box
@@ -29,7 +30,7 @@ const About = () => {
                 }}
             >
                 <Box sx={{ pl: 2 }}>
-                    <Title>О нас</Title>
+                    <Title anim>О нас</Title>
                     <Typography data-aos='fade-up' variant='h5' sx={{ mt: 2, fontSize: '23px' }}>
                         Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
                     </Typography>
@@ -41,7 +42,7 @@ const About = () => {
                             borderRadius: '20px',
                             width: '70%',
                             mt:5,
-                            display: ['none', 'block']
+                            display: ['none', 'none', 'block']
                         }}
                         data-aos='fade-up'
                     >

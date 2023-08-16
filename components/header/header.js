@@ -126,7 +126,7 @@ const Header = () => {
                         display: 'flex',
                         alignItems: 'center',
                         transition: 'all .2s ease-out',
-                        transform: isActive ? 'translateX(-100%)' : null,
+                        transform: isActive ? 'translateY(-100%)' : null,
                         p: 1,
                         gap: 1
                     }}

@@ -82,7 +82,7 @@ const BigScreen = () => {
                 </Box>
                 <Arrow left f={prev} active={current > 0} />
                 <Arrow right f={next} active={current < images.length - 1} />
-                <Dots current={current} length={images.length} />
+                <Dots current={current} length={images.length} setCurrent={setCurrent} />
                 <Box
                     sx={{
                         bgcolor: 'white',

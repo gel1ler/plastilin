@@ -13,8 +13,9 @@ const SmallScreen = () => {
             className='column-around'
             sx={{
                 mt: '70px',
-                height: '90vh',
+                height: '90svh',
                 mx: 'auto',
+                minHeight: '580px'
             }}
         >
             <Image
@@ -23,7 +24,7 @@ const SmallScreen = () => {
                 style={{
                     objectFit: 'contain',
                     height: 'min-content',
-                    width: '100%',
+                    width: '90%',
                     maxWidth: '500px',
                 }}
             />
@@ -34,8 +35,9 @@ const SmallScreen = () => {
                     objectFit: 'contain',
                     height: 'min-content',
                     borderRadius: '100%',
-                    width: '80vw',
-                    maxWidth: '500px'
+                    width: 'min-content',
+                    maxWidth: '500px',
+                    maxHeight: '40vh',
                 }}
             />
             <Box sx={{ my: 2 }}>

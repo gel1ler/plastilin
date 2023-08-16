@@ -12,7 +12,7 @@ const Arrow = ({ left, right, f, active }) => {
                 left: left ? 5 : null,
                 right: right ? 5 : null,
                 top: '50%',
-                cursor: 'pointer',
+                cursor: active ? 'pointer' : null,
                 transform: `translateY(-50%) ${left ? 'rotate(-180deg)' : null}`,
                 transition: 'all .3s ease-out',
                 opacity: active ? 1 : 0.4,
