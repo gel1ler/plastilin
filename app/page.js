@@ -1,7 +1,7 @@
 'use client'
 import styles from './page.module.css'
 import Start from '@/components/pages/index/start'
-import About from '@/components/pages/index/about'
+import About from '@/components/pages/index/about2'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import Header from '@/components/header/header'
 import Footer from '@/components/footer'
@@ -10,6 +10,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react'
 import Aos from 'aos'
+import Falling from './falling'
 
 const theme = createTheme({
   typography: {
@@ -50,6 +51,7 @@ export default function Home() {
   }, [])
   return (
     <ThemeProvider theme={theme}>
+      <Falling />
       <Header />
       <main className={styles.main}>
         <Start />

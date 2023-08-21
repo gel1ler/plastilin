@@ -17,7 +17,7 @@ const Contacts = () => {
         alignItems: 'center',
         mb: '20vh',
         width: ['90%', '80%', '100%'],
-        maxWidth: '1200px'
+        maxWidth: '1200px',
       }}
     >
       <Box
@@ -65,6 +65,7 @@ const Contacts = () => {
           label='Имя'
           sx={{
             width: '100%',
+            bgcolor: 'white'
           }}
         />
         <TextField
@@ -72,6 +73,7 @@ const Contacts = () => {
           label='Номер телефона'
           sx={{
             width: '100%',
+            bgcolor: 'white'
           }}
         />
         <MyButton anim />

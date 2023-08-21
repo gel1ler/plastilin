@@ -3,7 +3,7 @@ import { Box, Typography, useMediaQuery } from '@mui/material'
 import Title from '@/components/UI/title'
 import Image from 'next/image'
 import kids from '../../../public/cloud-kids.png'
-import halfKids from '../../../public/cloud-kids-half.png'
+import halfKids from '../../../public/side.png'
 import { useTheme } from '@mui/material/styles'
 
 const About = () => {
@@ -17,22 +17,21 @@ const About = () => {
             sx={{
                 overflow: 'hidden',
                 width: ['100vw', '100vw', '100vw', '1200px'],
-                minHeight: '90vh',
                 minWidth: '370px'
             }}
         >
             <Box
                 sx={{
                     display: 'grid',
-                    gridTemplate: '1fr/1fr 1fr',
+                    gridTemplate: '1fr/50vw 1fr',
                     my: 2,
-                    gap :2
+                    gap: 2
                 }}
             >
                 <Box sx={{ pl: 2 }}>
-                    <Title anim>О нас</Title>
-                    <Typography data-aos='fade-up' variant='h5' sx={{ mt: 2, fontSize: '23px' }}>
-                        Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+                    <Typography data-aos='fade-up' variant='h5'>Характер человека,</Typography>
+                    <Typography data-aos='fade-up' sx={{ fontSize: 18 }}>
+                        как пластилин. Сначала - мягкий и податливый, но со временем он твердеет и чтобы что-то изменить, приходится ломать форму. Поэтому так важно все закладывать с самого детства.
                     </Typography>
                     <Box
                         sx={{
@@ -41,12 +40,12 @@ const About = () => {
                             py: 4,
                             borderRadius: '20px',
                             width: '70%',
-                            mt:5,
+                            mt: 5,
                             display: ['none', 'none', 'block']
                         }}
                         data-aos='fade-up'
                     >
-                        <Typography data-aos='fade-up' sx={{ fontStyle: 'italic', fontWeight: 'bold', fontSize :23 }}>
+                        <Typography data-aos='fade-up' sx={{ fontStyle: 'italic', fontWeight: 'bold', fontSize: 23 }}>
                             "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться."
                         </Typography>
                     </Box>

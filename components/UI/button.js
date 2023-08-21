@@ -1,14 +1,15 @@
 import React from 'react'
 import { Button } from '@mui/material'
 
-const MyButton = ({anim}) => {
+const MyButton = ({ anim }) => {
     return (
         <Button
             variant='contained'
             sx={{
-                px: 2,
-                py: '10px',
-                mb: 2
+                p: 2,
+                mb: 2,
+                width: '90%',
+                borderRadius: '15px'
             }}
             data-aos={anim ? 'fade-up' : null}
         >
