@@ -1,9 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Handjet&family=Montserrat:wght@100&family=Nunito:wght@300;400;500;600;700&family=Pacifico&display=swap');
 
+@font-face {
+  font-family: 'Intro-Bold';
+  src: url('/fonts/Intro-Bold-Alt.ttf');
+}
+
 * {
   padding: 0;
   margin: 0;
+  -ms-overflow-style: none;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 .shadow {
   box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
@@ -24,7 +35,14 @@ a {
 }
 
 b {
-  color: orange
+  color: orange;
+  font-family: Intro-Bold;
+}
+
+.vertical-centered {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .column-centered {
@@ -84,7 +102,7 @@ b {
     opacity: 1;
   }
 
-  90%{
+  90% {
     opacity: 0;
   }
 

@@ -43,8 +43,8 @@ const Falling = () => {
                 bottom: 0,
                 overflow: 'hidden',
                 pointerEvents: 'none',
-                zIndex: -1,
-                opacity: 0.15,
+                zIndex: -100,
+                opacity: 0.1,
             }}
         >
             {Array(60).fill(0).map((i, key) =>
