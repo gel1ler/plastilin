@@ -5,14 +5,25 @@
   src: url('/fonts/Intro-Bold-Alt.ttf');
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: #dddddd;
+  background-clip: content-box;
+  border: 1px solid transparent
+}
+
 * {
   padding: 0;
   margin: 0;
-  -ms-overflow-style: none;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 
@@ -22,11 +33,11 @@
 
 html {
   min-width: 369px;
-  overflow-y: scroll;
 }
 
 body {
   position: relative;
+  /* overflow-x: hidden; */
 }
 
 a {
@@ -37,6 +48,12 @@ a {
 b {
   color: orange;
   font-family: Intro-Bold;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .vertical-centered {

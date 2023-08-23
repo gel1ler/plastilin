@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Box, IconButton, Typography } from '@mui/material'
 import Image from 'next/image'
-import kids1 from '../../../../public/start-kids-1.jpg'
-import kid2 from '../../../../public/start-kid-2.jpg'
-import kid3 from '../../../../public/start-kid-3.jpg'
+import kids1 from '../../../../public/children/1h.jpg'
+import kids2 from '../../../../public/children/2h.jpg'
+import kids3 from '../../../../public/children/3h.jpg'
 import Arrow from './arrow'
 import Dots from './dots'
 import Title from '@/components/UI/title'
 import MyButton from '@/components/UI/button'
 
-const images = [kids1, kid2, kid3]
+const images = [kids1, kids2, kids3]
 
 const BigScreen = () => {
     const [current, setCurrent] = useState(0)
@@ -87,19 +87,30 @@ const BigScreen = () => {
                     sx={{
                         bgcolor: 'white',
                         position: 'absolute',
-                        p:5,
+                        py: 2,
                         zIndex: 100,
-                        bottom: '10%',
-                        left: '10%',
-                        borderRadius: '5%'
-                      }}
-                      className='column-centered'
-                      data-aos='fade-up' 
+                        bottom: '5%',
+                        left: '7%',
+                        borderRadius: '30px',
+                        width: '40%'
+                    }}
+                    className='column-centered'
+                // data-aos='fade-up'
                 >
                     <Box sx={{ my: 2 }}>
-                        <Title>Какой-то текст</Title>
-                        <Typography data-aos='fade-up' textAlign='center' sx={{ mt: 1, width: '70%', mx: 'auto' }}>
-                            Давно выяснено, что при оценке дизайна.
+                        <Typography
+                            textAlign='center'
+                            sx={{
+                                mx: 'auto',
+                                width: '70%',
+                                fontSize: 35
+                            }}
+                        >
+
+                            <b>Маленький</b> человек - уже большая <b>личность</b>
+                        </Typography>
+                        <Typography data-aos='fade-up' variant='h6' textAlign='center' sx={{ mt: 1, width: '70%', mx: 'auto' }}>
+                            Дети нашего центра понимают свои и чужие эмоции, осознают их причину.
                         </Typography>
                     </Box>
                     <MyButton />

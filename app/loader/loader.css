@@ -1,0 +1,172 @@
+*{
+    animation-delay: 5s;
+}
+
+.index {
+    height: 100vh;
+}
+
+.cls-1 {
+    fill: #df4613;
+}
+
+.cls-2 {
+    fill: #f7ab00;
+}
+
+.cls-3 {
+    fill: #369449;
+}
+
+.cls-4 {
+    fill: #ea7aad;
+}
+
+
+.cls-6 {
+    fill: #4faa33;
+}
+
+.cls-7 {
+    fill: #b61667;
+}
+
+.cls-8 {
+    fill: #009339;
+}
+
+.text {
+    fill: #f3dfad;
+    animation: .8s text
+}
+
+@keyframes text {
+    0% {
+        opacity: 0;
+        transform: translatey(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+
+.name {
+    fill: #f3dfad;
+    animation: 1.2s name;
+}
+
+@keyframes name {
+    0% {
+        opacity: 0;
+        transform: translatey(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+
+.circle {
+    fill: #f3dfad;
+    animation: 1s circle
+}
+
+@keyframes circle {
+    0% {
+        opacity: 0;
+        transform: translatey(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+
+.tor {
+    fill: #f3dfad;
+    animation: 1.4s tor;
+}
+
+@keyframes tor {
+    0% {
+        opacity: 0;
+        transform: rotate(-10deg) translatey(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) translatey(0);
+    }
+}
+
+.left-redis {
+    fill: #f3dfad;
+    animation: 1.5s left-redis;
+}
+
+@keyframes left-redis {
+    0% {
+        opacity: 0;
+        transform: rotate(-10deg) translatey(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) translatey(0);
+    }
+}
+
+.right-redis {
+    fill: #f3dfad;
+    animation: 1.6s right-redis;
+}
+
+@keyframes right-redis {
+    0% {
+        opacity: 0;
+        transform: rotate(-10deg) translatey(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) translatey(0);
+    }
+}
+
+.left-ball {
+    fill: #f3dfad;
+    animation: 1.7s left-ball;
+}
+
+@keyframes left-ball {
+    0% {
+        opacity: 0;
+        transform: rotate(-10deg) translatey(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) translatey(0);
+    }
+}
+
+.right-ball {
+    fill: #f3dfad;
+    animation: 1.8s right-ball;
+}
+
+@keyframes right-ball {
+    0% {
+        opacity: 0;
+        transform: rotate(-10deg) translatey(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) translatey(0);
+    }
+}

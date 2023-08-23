@@ -1,5 +1,5 @@
 import React from 'react'
-import arrow from '../../../../public/arrow.svg'
+import arrow from '../../../../public/icons/arrow.svg'
 import Image from 'next/image'
 import { Box } from '@mui/material'
 

@@ -26,7 +26,8 @@ const Element = ({ num }) => {
                     num == 1 ? -2 :
                         num}s`,
                 rotate: rotate + 'deg',
-                scale: 0.7
+                scale: 0.7,
+                filter: 'blur(3px)'
             }}
         />
     )
@@ -44,7 +45,8 @@ const Falling = () => {
                 overflow: 'hidden',
                 pointerEvents: 'none',
                 zIndex: -100,
-                opacity: 0.1,
+                opacity: 0.15,
+                
             }}
         >
             {Array(60).fill(0).map((i, key) =>

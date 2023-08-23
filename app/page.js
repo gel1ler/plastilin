@@ -8,8 +8,9 @@ import Footer from '@/components/footer'
 import Contacts from '@/components/pages/index/contacts'
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Falling from './falling'
+import Loader from './loader/loader'
 
 const theme = createTheme({
   typography: {
@@ -26,6 +27,9 @@ const theme = createTheme({
     },
     secondary: {
       main: '#EFDAA8',
+    },
+    additional: {
+      main: '#ebebeb'
     }
   },
   shape: {
@@ -39,18 +43,22 @@ const theme = createTheme({
       lg: 1200,
       xl: 1536,
     }
-  }
+  },
 })
 
 export default function Home() {
+  const [loading, setLoading] = useState(true)
+
   useEffect(() => {
     AOS.init({
       anchorPlacement: 'bottom-bottom'
     })
     AOS.refresh()
+    setTimeout(() => setLoading(false), 1000)
   }, [])
   return (
     <ThemeProvider theme={theme}>
+      <Loader loading={loading} />
       <Falling />
       <Header />
       <main className={styles.main}>

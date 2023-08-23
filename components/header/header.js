@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react'
 import { Menu } from '@mui/icons-material'
 import IB from '../UI/IB'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
-import logo from '../../public/logo-gorizontal.svg'
+import logo from '../../public/logo/logo-gorizontal.svg'
 import Image from 'next/image'
 import MyDrawer from './drawer'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
@@ -40,7 +40,7 @@ const Header = () => {
                     right: 0,
                     position: 'fixed',
                     bgcolor: 'white',
-                    zIndex: 999,
+                    zIndex: 900,
                     transition: 'box-shadow .2s ease-out',
                     height: '70px'
                 }}
@@ -110,12 +110,12 @@ const Header = () => {
                     left: 0,
                     right: 0,
                     position: 'fixed',
-                    bgcolor: 'white',
-                    zIndex: 999,
+                    zIndex: 900,
                     transition: 'box-shadow .2s ease-out',
                     display: 'flex',
                     alignItems: 'center',
                     px: [1, 2, 3, 4],
+                    bgcolor: 'white',
                 }}
                 className={isActive ? 'shadow' : null}
             >
