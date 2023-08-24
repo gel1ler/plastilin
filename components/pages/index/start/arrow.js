@@ -13,7 +13,7 @@ const Arrow = ({ left, right, f, active }) => {
                 right: right ? 5 : null,
                 top: '50%',
                 cursor: active ? 'pointer' : null,
-                transform: `translateY(-50%) ${left ? 'rotate(-180deg)' : null}`,
+                transform: left ? 'scale(-1, 1) translateY(-50%)' : 'translateY(-50%)',
                 transition: 'all .3s ease-out',
                 opacity: active ? 1 : 0.4,
                 ':hover': {
@@ -23,6 +23,7 @@ const Arrow = ({ left, right, f, active }) => {
             }}
         >
             <Image
+                alt='Стрелка'
                 src={arrow}
                 style={{
                     height: '100px',

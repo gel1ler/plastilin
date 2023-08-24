@@ -1,12 +1,19 @@
 import { Box, Dialog, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined'
-import IB from '@/components/UI/IB'
 import Info from './info'
+import stock from '@/public/people/person.png'
 
 const Teacher = ({ i }) => {
     const [open, setOpen] = useState(false)
+
+    const handleOpen = () => {
+        setOpen(true)
+    }
+
+    const handleClose = () => {
+        setOpen(false)
+    }
 
     return (
         <Box
@@ -22,32 +29,46 @@ const Teacher = ({ i }) => {
                 height: 'auto',
                 overflow: 'hidden',
                 py: 2,
-                maxWidth: '300px'
+                maxWidth: '300px',
+                transition: 'all .5s ease',
+                overflow: 'hidden',
+                '&:hover': {
+                    '& .text12': {
+                        background: 'rgba(235, 235, 235, .9)',
+                        opacity: 1
+                    }
+                }
             }}
         >
-            <Info open={open} setOpen={setOpen} i={i} />
-            <IB
-                f={() => setOpen(true)}
+            <Box
                 sx={{
+                    cursor: 'pointer',
                     position: 'absolute',
-                    right: 10,
-                    top: 10
+                    left: 0,
+                    top: 0,
+                    width: '100%',
+                    height: '100%',
+                    opacity: 0,
+                    transition: 'all .3s ease',
+
                 }}
+                className='center text12'
+                onClick={handleOpen}
             >
-                <InfoOutlinedIcon />
-            </IB>
+                <Typography variant='h5' sx={{ textDecoration: 'underline' }}>
+                    Подробнее
+                </Typography>
+            </Box>
+            <Info open={open} onClose={handleClose} i={i} />
             <Image
                 alt='Преподаватель'
-                src={i.photo}
-
-
+                src={i.photo ? i.photo : stock}
                 style={{
                     objectFit: 'cover',
                     minWidth: 160,
                     minHeight: 160,
                     width: '80%',
                     height: '80%',
-                    // aspectRatio: '1/1',
                     borderRadius: '100%',
                 }}
             />
@@ -56,7 +77,7 @@ const Teacher = ({ i }) => {
                     {i.name}
                 </Typography>
             </Box>
-        </Box>
+        </Box >
     )
 }
 

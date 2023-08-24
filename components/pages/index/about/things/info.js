@@ -1,13 +1,12 @@
 import { Box, Dialog, Typography } from '@mui/material'
 import React from 'react'
 import Image from 'next/image'
-import stock from '@/public/people/person.png'
 
-const Info = ({ open, onClose, i }) => {
+const Info = ({ open, setOpen, i }) => {
     return (
         <Dialog
             open={open}
-            onClose={onClose}
+            onClose={() => setOpen(false)}
             sx={{
                 overflowX: 'hidden'
             }}
@@ -17,7 +16,7 @@ const Info = ({ open, onClose, i }) => {
                 sx={{
                     p: 3,
                     gap: 2,
-                    overflowY: 'scroll',
+                    // overflowY: 'scroll',
                     maxHeight: '80vh',
                     overflowX: 'hidden'
                 }}
@@ -27,13 +26,13 @@ const Info = ({ open, onClose, i }) => {
                 </Typography>
                 <Image
                     alt='Преподаватель'
-                    src={i.photo ? i.photo : stock}
+                    src={i.photo}
                     width={270}
                     style={{
                         borderRadius: '100%'
                     }}
                 />
-                <Typography>
+                <Typography textAlign='center'>
                     {i.description}
                 </Typography>
             </Box>

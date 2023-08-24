@@ -1,12 +1,14 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import { people } from '../data'
 import Teacher from './teacher'
 
 const Teachers = () => {
+    const theme = useTheme()
+    const isLargeScreen = useMediaQuery(theme.breakpoints.up('md'))
     return (
         <Box id='teachers'>
-            <Typography data-aos='fade-up' variant='h3' textAlign='center'>Наши <b>педагоги</b></Typography>
+            <Typography data-aos='fade-up' variant={isLargeScreen ? 'h3': 'h4'} textAlign='center'>Наши <b>педагоги</b></Typography>
             <Box
                 sx={{
                     display: 'flex',

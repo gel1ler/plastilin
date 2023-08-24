@@ -7,12 +7,12 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 
 const Slider = ({ imageRef }) => {
     return (
-        <Box>
+        <Box sx={{ width: '100vw' }}>
             <Box sx={{ position: 'relative' }}>
                 <Typography data-aos='fade-up' variant='h4' textAlign='center'>Характер человека, как <b>пластилин</b></Typography>
                 <Image
                     id='about'
-                    alt='rotated half bg'
+                    alt='Вращающийся элемент на заднем плане'
                     data-aos='fade-up'
                     ref={imageRef}
                     src={half}
@@ -42,8 +42,7 @@ const Slider = ({ imageRef }) => {
                     width: '100vw',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: ['start', 'start', 'center'],
-                    width: '100vw'
+                    justifyContent: ['start', 'start', 'start', 'center'],
                 }}
                 data-aos='fade-up'
             >
@@ -61,7 +60,7 @@ const Slider = ({ imageRef }) => {
                                 width: '90vw',
                                 maxWidth: ['none', 'none', '50vw', '30vw'],
                                 overflow: 'hidden',
-                                my: 1
+                                my: 1,
                             }}
                         >
                             <Box
@@ -99,7 +98,7 @@ const Slider = ({ imageRef }) => {
                                 <Typography
                                     variant="h5"
                                     textAlign='center'
-                                    sx={{ m: 2 }}
+                                    sx={{ m: [2, 2, 3] }}
                                 >
                                     {i.text}
                                 </Typography>

@@ -11,7 +11,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  display: none;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -37,7 +37,8 @@ html {
 
 body {
   position: relative;
-  /* overflow-x: hidden; */
+  width: '100vw';
+  overflow-x: hidden;
 }
 
 a {

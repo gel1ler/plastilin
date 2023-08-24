@@ -1,10 +1,10 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material'
+import { Box, Button, Typography } from '@mui/material'
 import Image from 'next/image'
 import logo from '../../../../public/logo/logo-gorizontal.svg'
 import kids from '../../../../public/children/start-circle.png'
-import Title from '@/components/UI/title'
 import MyButton from '@/components/UI/button'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const SmallScreen = () => {
     return (
@@ -17,7 +17,7 @@ const SmallScreen = () => {
                 mx: 'auto',
                 minHeight: '570px',
                 justifyContent: 'center',
-                gap:1
+                gap: 1
             }}
         >
             <Image
@@ -63,7 +63,19 @@ const SmallScreen = () => {
                     Дети нашего центра понимают свои и чужие эмоции, осознают их причину.
                 </Typography>
             </Box>
-            <MyButton />
+            <AnchorLink href='#form' offset={100}>
+                <Button
+                    variant='contained'
+                    sx={{
+                        p: 2,
+                        mb: 2,
+                        width: '100%',
+                        borderRadius: '15px'
+                    }}
+                >
+                    Записаться на пробное занятие
+                </Button>
+            </AnchorLink>
         </Box>
     )
 }

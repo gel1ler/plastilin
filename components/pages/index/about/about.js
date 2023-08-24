@@ -6,7 +6,7 @@ import half from '@/public/falling/half.svg'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 import Slider from './slider'
 import { what } from './data'
-import Things from './things'
+import Things from './things/things'
 import Teachers from './teachers/teachers'
 
 
@@ -26,10 +26,11 @@ const About = () => {
         <Box
             
             sx={{
-                width: ['100vw', '100vw', '100vw', '1200px'],
+                width: '100vw',
                 minWidth: '300px',
                 display: 'flex',
                 flexDirection: 'column',
+                alignItems: 'center',
                 gap:[8,8,16]
             }}
         >

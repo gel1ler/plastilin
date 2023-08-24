@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Box, IconButton, Typography } from '@mui/material'
+import { Box, Button, IconButton, Typography } from '@mui/material'
 import Image from 'next/image'
 import kids1 from '../../../../public/children/1h.jpg'
 import kids2 from '../../../../public/children/2h.jpg'
@@ -8,6 +8,7 @@ import Arrow from './arrow'
 import Dots from './dots'
 import Title from '@/components/UI/title'
 import MyButton from '@/components/UI/button'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const images = [kids1, kids2, kids3]
 
@@ -113,7 +114,19 @@ const BigScreen = () => {
                             Дети нашего центра понимают свои и чужие эмоции, осознают их причину.
                         </Typography>
                     </Box>
-                    <MyButton />
+                    <AnchorLink href='#form'>
+                        <Button
+                            variant='contained'
+                            sx={{
+                                p: 2,
+                                mb: 2,
+                                width: '100%',
+                                borderRadius: '15px'
+                            }}
+                        >
+                            Записаться на пробное занятие
+                        </Button>
+                    </AnchorLink>
                 </Box>
             </Box>
         </Box>

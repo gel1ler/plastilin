@@ -51,10 +51,10 @@ export default function Home() {
 
   useEffect(() => {
     AOS.init({
-      anchorPlacement: 'bottom-bottom'
+      anchorPlacement: 'bottom-bottom',
     })
     AOS.refresh()
-    setTimeout(() => setLoading(false), 2000)
+    setTimeout(() => setLoading(false), 1500)
   }, [])
   return (
     <ThemeProvider theme={theme}>
