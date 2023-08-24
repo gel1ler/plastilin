@@ -54,7 +54,7 @@ export default function Home() {
       anchorPlacement: 'bottom-bottom'
     })
     AOS.refresh()
-    setTimeout(() => setLoading(false), 1000)
+    setTimeout(() => setLoading(false), 2000)
   }, [])
   return (
     <ThemeProvider theme={theme}>

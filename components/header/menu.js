@@ -14,8 +14,8 @@ const navLinks = [
         name: 'О нас'
     },
     {
-        href: '#gallery',
-        name: 'Галерея'
+        href: '#teachers',
+        name: 'Педагоги'
     },
     {
         href: '#contacts',

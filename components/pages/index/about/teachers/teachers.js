@@ -5,7 +5,7 @@ import Teacher from './teacher'
 
 const Teachers = () => {
     return (
-        <Box>
+        <Box id='teachers'>
             <Typography data-aos='fade-up' variant='h3' textAlign='center'>Наши <b>педагоги</b></Typography>
             <Box
                 sx={{
