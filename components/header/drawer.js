@@ -19,6 +19,7 @@ const MyDrawer = ({ open, setOpen }) => {
                     position: 'relative',
                     bgcolor: 'secondary.main',
                     color: 'white',
+                    overflow: 'hidden'
                 }}
             >
                 <Box

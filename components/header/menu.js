@@ -38,14 +38,19 @@ const Menu = ({close}) => {
         >
             {navLinks.map((link) => {
                 const isActive = pathname.startsWith(link.href)
-                console.log(isActive)
                 return (
                     <AnchorLink offset='100' href={link.href} key={link.name} style={{ textDecoration: 'none' }}>
                         <Typography
                             variant='h4'
                             sx={{
                                 color: isActive ? 'primary.main' : 'black',
-                                textDecoration: isActive ? 'underline' : null
+                                textDecoration: isActive ? 'underline' : null,
+                                transition: 'all .2s ease',
+                                '&:hover': {
+                                    color: 'white'
+                                }
+                                ,
+                                
                             }}
                         >
                             {link.name}
