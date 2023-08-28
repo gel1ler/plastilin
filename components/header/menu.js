@@ -4,26 +4,42 @@ import Link from "next/link"
 import { Box, Typography } from '@mui/material'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-const navLinks = [
-    {
-        href: '#home',
-        name: 'Главная'
-    },
-    {
-        href: '#about',
-        name: 'О нас'
-    },
-    {
-        href: '#teachers',
-        name: 'Педагоги'
-    },
-    {
-        href: '#contacts',
-        name: 'Контакты'
-    }
-]
+const Menu = ({ close, main }) => {
+    const navLinks = main ?
+        [
+            {
+                href: '#home',
+                name: 'Главная'
+            },
+            {
+                href: '#about',
+                name: 'О нас'
+            },
+            {
+                href: '#teachers',
+                name: 'Педагоги'
+            },
+            {
+                href: '#contacts',
+                name: 'Контакты'
+            },
+            {
+                href: '/groups',
+                name: 'Группы'
+            }
+        ]
+        :
+        [
+            {
+                href: '/',
+                name: 'Главная'
+            },
+            {
+                href: '/groups',
+                name: 'Группы'
+            }
+        ]
 
-const Menu = ({close}) => {
     const pathname = usePathname()
     return (
         <Box
@@ -37,20 +53,31 @@ const Menu = ({close}) => {
             onClick={close}
         >
             {navLinks.map((link) => {
-                const isActive = pathname.startsWith(link.href)
-                console.log(isActive)
                 return (
-                    <AnchorLink offset='100' href={link.href} key={link.name} style={{ textDecoration: 'none' }}>
-                        <Typography
-                            variant='h4'
-                            sx={{
-                                color: isActive ? 'primary.main' : 'black',
-                                textDecoration: isActive ? 'underline' : null
-                            }}
-                        >
-                            {link.name}
-                        </Typography>
-                    </AnchorLink>
+                    link.href[0] === '/' ?
+                        <Link href={link.href} key={link.name}>
+                            <Typography
+                                variant='h4'
+                                sx={{
+                                    color: 'black',
+                                    textDecoration: null
+                                }}
+                            >
+                                {link.name}
+                            </Typography>
+                        </Link>
+                        :
+                        <AnchorLink offset='100' href={link.href} key={link.name} style={{ textDecoration: 'none' }}>
+                            <Typography
+                                variant='h4'
+                                sx={{
+                                    color: 'black',
+                                    textDecoration: null
+                                }}
+                            >
+                                {link.name}
+                            </Typography>
+                        </AnchorLink>
                 )
             })}
         </Box>

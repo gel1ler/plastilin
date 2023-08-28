@@ -1,5 +1,4 @@
 'use client'
-import styles from './page.module.css'
 import Start from '@/components/pages/index/start'
 import About from '@/components/pages/index/about/about'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
@@ -11,6 +10,7 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from 'react'
 import Falling from './falling'
 import Loader from './loader/loader'
+import Head from 'next/head'
 
 const theme = createTheme({
   typography: {
@@ -57,13 +57,14 @@ export default function Home() {
     setTimeout(() => setLoading(false), 1500)
   }, [])
   return (
+
     <ThemeProvider theme={theme}>
       <Loader loading={loading} />
       <Falling />
-      <Header />
-      <main className={styles.main}>
+      <Header main />
+      <main>
         <Start />
-        <About />
+        <About main />
         <Contacts />
       </main>
       <Footer />

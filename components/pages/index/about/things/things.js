@@ -66,7 +66,7 @@ const Things = () => {
                 </Typography>
               </Box>
               <Image
-                alt='Icon'
+                alt='Иконка'
                 src={i.icon}
                 width={150}
                 height={150}
@@ -106,7 +106,7 @@ const Things = () => {
               }}
             >
               <Image
-                alt='Icon'
+                alt='Иконка'
                 src={i.icon}
                 width={50}
                 height={50}

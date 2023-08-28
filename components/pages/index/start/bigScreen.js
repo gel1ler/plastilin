@@ -6,14 +6,13 @@ import kids2 from '../../../../public/children/2h.jpg'
 import kids3 from '../../../../public/children/3h.jpg'
 import Arrow from './arrow'
 import Dots from './dots'
-import Title from '@/components/UI/title'
-import MyButton from '@/components/UI/button'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import Link from 'next/link'
 
 const images = [kids1, kids2, kids3]
 
 const BigScreen = () => {
     const [current, setCurrent] = useState(0)
+
     const translate = -current * 100
 
     useEffect(() => {
@@ -69,7 +68,7 @@ const BigScreen = () => {
                     {images.map((image, key) =>
                         <Image
                             key={key}
-                            alt='Стартовое фото дети'
+                            alt='Дети из детского центра Пластилин'
                             src={image}
                             style={{
                                 objectFit: 'cover',
@@ -96,25 +95,37 @@ const BigScreen = () => {
                         width: '40%'
                     }}
                     className='column-centered'
-                // data-aos='fade-up'
                 >
                     <Box sx={{ my: 2 }}>
                         <Typography
                             textAlign='center'
                             sx={{
                                 mx: 'auto',
-                                width: '70%',
+                                width: '80%',
                                 fontSize: 35
                             }}
                         >
-
-                            <b>Маленький</b> человек - уже большая <b>личность</b>
+                            <b>Открыт набор</b> в группы с 16-го сентября.
                         </Typography>
                         <Typography data-aos='fade-up' variant='h6' textAlign='center' sx={{ mt: 1, width: '70%', mx: 'auto' }}>
-                            Дети нашего центра понимают свои и чужие эмоции, осознают их причину.
+                            5 возрастных групп от <b>1.2 года</b>
                         </Typography>
                     </Box>
-                    <AnchorLink href='#form'>
+                    <Link href='/groups'>
+                        <Button
+                            variant='contained'
+                            sx={{
+                                px: 5,
+                                py: 1,
+                                mb: 2,
+                                width: 'max-content',
+                                borderRadius: '15px'
+                            }}
+                        >
+                            Подробнее
+                        </Button>
+                    </Link>
+                    {/* <AnchorLink href='#form'>
                         <Button
                             variant='contained'
                             sx={{
@@ -126,7 +137,7 @@ const BigScreen = () => {
                         >
                             Записаться на пробное занятие
                         </Button>
-                    </AnchorLink>
+                    </AnchorLink> */}
                 </Box>
             </Box>
         </Box>

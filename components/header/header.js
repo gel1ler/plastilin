@@ -10,8 +10,9 @@ import Image from 'next/image'
 import MyDrawer from './drawer'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '../icons'
+import Link from 'next/link'
 
-const Header = () => {
+const Header = ({ main }) => {
     const theme = useTheme()
     const isXLargeScreen = useMediaQuery(theme.breakpoints.up('lg'))
     const [open, setOpen] = useState(false)
@@ -55,8 +56,7 @@ const Header = () => {
                         mx: 'auto'
                     }}
                 >
-
-                    <MyDrawer open={open} setOpen={setOpen} />
+                    <MyDrawer main={main} open={open} setOpen={setOpen} />
                     <Box
                         sx={{
                             display: 'flex',
@@ -81,13 +81,23 @@ const Header = () => {
                             height: 'min-content',
                         }}
                     >
-                        <AnchorLink href='#home'>
-                            <Image
-                                alt='Логотип'
-                                src={logo}
-                                style={{ objectFit: 'contain', height: '48px', width: 'min-content', display: 'block' }}
-                            />
-                        </AnchorLink>
+                        {main ?
+                            <AnchorLink href='#home'>
+                                <Image
+                                    alt='Логотип детского центра Пластилин'
+                                    src={logo}
+                                    style={{ objectFit: 'contain', height: '48px', width: 'min-content', display: 'block' }}
+                                />
+                            </AnchorLink>
+                            :
+                            <Link href='/'>
+                                <Image
+                                    alt='Логотип детского центра Пластилин'
+                                    src={logo}
+                                    style={{ objectFit: 'contain', height: '48px', width: 'min-content', display: 'block' }}
+                                />
+                            </Link>
+                        }
                     </Box>
                     <Box
                         sx={{
@@ -119,7 +129,7 @@ const Header = () => {
                 }}
                 className={isActive ? 'shadow' : null}
             >
-                <MyDrawer open={open} setOpen={setOpen} />
+                <MyDrawer main={main} open={open} setOpen={setOpen} />
                 <Box
                     sx={{
                         position: 'absolute',
@@ -149,13 +159,23 @@ const Header = () => {
                         height: 'min-content',
                     }}
                 >
-                    <AnchorLink href='#home'>
-                        <Image
-                            alt='Логотип'
-                            src={logo}
-                            style={{ objectFit: 'contain', height: '38px', width: 'min-content', display: 'block' }}
-                        />
-                    </AnchorLink>
+                    {main ?
+                        <AnchorLink href='#home'>
+                            <Image
+                                alt='Логотип детского центра Пластилин'
+                                src={logo}
+                                style={{ objectFit: 'contain', height: '38px', width: 'min-content', display: 'block' }}
+                            />
+                        </AnchorLink>
+                        :
+                        <Link href='/'>
+                            <Image
+                                alt='Логотип детского центра Пластилин'
+                                src={logo}
+                                style={{ objectFit: 'contain', height: '38px', width: 'min-content', display: 'block' }}
+                            />
+                        </Link>
+                    }
                 </Box>
                 <Box
                     sx={{

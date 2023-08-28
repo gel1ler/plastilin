@@ -4,7 +4,6 @@ import { Button } from '@mui/material'
 const MyButton = ({link, pName, cName, age, disabled }) => {
     const sendMsg = () => {
         let ageText
-        console.log(age)
         if (age == '1') {
             ageText = 'год'
         }

@@ -26,7 +26,7 @@ const Info = ({ open, onClose, i }) => {
                     {i.fullName}
                 </Typography>
                 <Image
-                    alt='Преподаватель'
+                    alt='Преподаватель детского центра Пластилин'
                     src={i.photo ? i.photo : stock}
                     width={270}
                     style={{

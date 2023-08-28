@@ -61,7 +61,7 @@ const Teacher = ({ i }) => {
             </Box>
             <Info open={open} onClose={handleClose} i={i} />
             <Image
-                alt='Преподаватель'
+                alt='Преподаватель детского центра Пластилин'
                 src={i.photo ? i.photo : stock}
                 style={{
                     objectFit: 'cover',

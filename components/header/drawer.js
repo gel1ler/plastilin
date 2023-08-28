@@ -6,7 +6,7 @@ import IB from '../UI/IB'
 import Menu from './menu'
 import { InstagramIcon, VkIcon, TelegramIcon, PhoneCall } from '../icons'
 
-const MyDrawer = ({ open, setOpen }) => {
+const MyDrawer = ({ open, setOpen, main }) => {
     const theme = useTheme()
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
 
@@ -38,7 +38,7 @@ const MyDrawer = ({ open, setOpen }) => {
                     >
                         <Close sx={{ fontSize: '35px' }} />
                     </IB>
-                    <Menu close={() => setOpen(false)} />
+                    <Menu main={main} close={() => setOpen(false)} />
                     <Box
                         className='column-centered'
                         sx={{

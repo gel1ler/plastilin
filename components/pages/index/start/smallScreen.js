@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box, Button, Typography } from '@mui/material'
 import Image from 'next/image'
 import logo from '../../../../public/logo/logo-gorizontal.svg'
 import kids from '../../../../public/children/start-circle.png'
 import MyButton from '@/components/UI/button'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import Link from 'next/link'
+
 
 const SmallScreen = () => {
     return (
@@ -20,8 +22,9 @@ const SmallScreen = () => {
                 gap: 1
             }}
         >
+
             <Image
-                alt='Логотип'
+                alt='Логотип  детского центра Пластилин'
                 src={logo}
                 width={300}
                 style={{
@@ -29,7 +32,7 @@ const SmallScreen = () => {
                 }}
             />
             <Image
-                alt='Стартовое фото дети'
+                alt='Дети из детского центра Пластилин'
                 src={kids}
                 width={285}
                 height={285}
@@ -49,7 +52,7 @@ const SmallScreen = () => {
                     }}
                 >
 
-                    <b>Маленький</b> человек - уже большая <b>личность</b>
+                    <b>Открыт набор</b> в группы с <span className='nowrap'>16-го</span> сентября.
                 </Typography>
                 <Typography
                     textAlign='center'
@@ -63,7 +66,21 @@ const SmallScreen = () => {
                     Дети нашего центра понимают свои и чужие эмоции, осознают их причину.
                 </Typography>
             </Box>
-            <AnchorLink href='#form' offset={100}>
+            <Link href='/groups'>
+                <Button
+                    variant='contained'
+                    sx={{
+                        px: 5,
+                        py: 1,
+                        mb: 2,
+                        width: 'max-content',
+                        borderRadius: '15px'
+                    }}
+                >
+                    Подробнее
+                </Button>
+            </Link>
+            {/* <AnchorLink href='#form' offset={100}>
                 <Button
                     variant='contained'
                     sx={{
@@ -75,7 +92,7 @@ const SmallScreen = () => {
                 >
                     Записаться на пробное занятие
                 </Button>
-            </AnchorLink>
+            </AnchorLink> */}
         </Box>
     )
 }

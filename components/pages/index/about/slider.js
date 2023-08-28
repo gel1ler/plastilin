@@ -12,7 +12,7 @@ const Slider = ({ imageRef }) => {
                 <Typography data-aos='fade-up' variant='h4' textAlign='center'>Характер человека, как <b>пластилин</b></Typography>
                 <Image
                     id='about'
-                    alt='Вращающийся элемент на заднем плане'
+                    alt='Часть логотипа детского центра Пластилин'
                     data-aos='fade-up'
                     ref={imageRef}
                     src={half}
@@ -87,7 +87,7 @@ const Slider = ({ imageRef }) => {
                                     }}
                                 />
                                 <Image
-                                    alt='Дети'
+                                    alt='Дети из детского центра Пластилин'
                                     fill
                                     src={i.image}
                                     style={{

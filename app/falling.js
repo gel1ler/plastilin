@@ -18,7 +18,7 @@ const Element = ({ num }) => {
     return (
         <Image
             src={src}
-            alt='Падающий объект'
+            alt='Часть логотипа детского центра Пластилин'
             className='falling'
             style={{
                 left: `${left}%`,
