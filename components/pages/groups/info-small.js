@@ -2,6 +2,7 @@ import { Box, Dialog, Typography, List, ListItemText, Divider } from '@mui/mater
 import React, { useState } from 'react'
 import Link from 'next/link'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import Form from '@/components/UI/form';
 
 const ListText = ({ children, name }) => {
     const [open, setOpen] = useState(false)
@@ -73,7 +74,7 @@ const InfoSmall = () => {
                 </Typography>
                 <List disablePadding>
                     <ListItemText>
-                        1. Утренняя группа: 9:00* - 13:00 *дежурная  группа ежедневно принимает детей с 7:00.
+                        1. Утренняя группа: 9:00* - 13:00<br/> *дежурная  группа ежедневно принимает детей с 7:00.
                     </ListItemText>
                     <ListItemText>
                         2. Вечерняя группа: 16:00 - 20:00
@@ -533,6 +534,7 @@ const InfoSmall = () => {
                     </ListItemText>
                 </List>
             </Box>
+            <Form center m />
             <Typography variant="h6" textAlign='center'>
                 Праздничное открытие состоится <b>16 сентября!</b> Ждём вас в гости с 16:00 до 20:00 🎈Будет много угощений, анимационная программа, конкурсы и мастер-классы 🎉
             </Typography>

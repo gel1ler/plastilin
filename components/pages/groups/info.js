@@ -2,6 +2,7 @@ import { Box, Dialog, Typography, List, ListItemText, Tabs, Tab } from '@mui/mat
 import React, { useState } from 'react'
 import MyTabs from './myTabs'
 import MyTabs2 from './myTabs2'
+import Form from '@/components/UI/form'
 
 const Info = () => {
     const [value1, setValue1] = useState(0)
@@ -113,6 +114,7 @@ const Info = () => {
                     </ListItemText>
                 </List>
             </Box>
+            <Form center m />
             <Typography variant="h6" textAlign='center'>
                 Праздничное открытие состоится <b>16 сентября!</b> Ждём вас в гости с 16:00 до 20:00 🎈Будет много угощений, анимационная программа, конкурсы и мастер-классы 🎉
             </Typography>
