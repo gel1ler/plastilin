@@ -52,7 +52,7 @@ const SmallScreen = () => {
                     }}
                 >
 
-                    <b>Открыт набор</b> в группы с <span className='nowrap'>16-го</span> сентября.
+                    <b>Идет набор</b> в группы
                 </Typography>
                 <Typography
                     textAlign='center'
@@ -62,8 +62,7 @@ const SmallScreen = () => {
                         width: '90%',
                     }}
                 >
-
-                    Дети нашего центра понимают свои и чужие эмоции, осознают их причину.
+                    5 возрастных групп от <b>1.2 года</b>
                 </Typography>
             </Box>
             <Link href='/groups'>

@@ -25,7 +25,7 @@ const MyTabs = ({ value, handleChange }) => {
     return (
         <Box>
             <Tabs value={value} onChange={handleChange}>
-                <Tab label="1️⃣ Ясельная" />
+                <Tab label="1️⃣ Ясли" />
                 <Tab label="2️⃣ Младшая" />
                 <Tab label="3️⃣ Средняя" />
                 <Tab label="4️⃣ Старшая" />
@@ -34,7 +34,7 @@ const MyTabs = ({ value, handleChange }) => {
             <TabPanel value={value} index={0}>
                 <Box>
                     <Typography variant="h5">
-                        1️⃣ Ясельная группа
+                        1️⃣ Ясли
                     </Typography>
                     <List disablePadding>
                         <ListItemText>

@@ -101,13 +101,13 @@ const BigScreen = () => {
                             textAlign='center'
                             sx={{
                                 mx: 'auto',
-                                width: '80%',
+                                width: '90%',
                                 fontSize: 35
                             }}
                         >
-                            <b>Открыт набор</b> в группы с 16-го сентября.
+                            <b>Идет набор</b> в группы
                         </Typography>
-                        <Typography data-aos='fade-up' variant='h6' textAlign='center' sx={{ mt: 1, width: '70%', mx: 'auto' }}>
+                        <Typography data-aos='fade-up' variant='h6' textAlign='center' sx={{ mt: 1, width: '90%', mx: 'auto' }}>
                             5 возрастных групп от <b>1.2 года</b>
                         </Typography>
                     </Box>

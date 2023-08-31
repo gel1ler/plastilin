@@ -19,7 +19,10 @@ const Footer = () => {
                 Детский центр Пластилин
             </Typography>
             <Typography textAlign='center'>
-                Все права защищены
+                Раменское, ул. Свободы, 6А
+            </Typography>
+            <Typography variant='body2' textAlign='center'>
+                2023. Все права защищены
             </Typography>
         </Box>
     )

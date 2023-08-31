@@ -74,7 +74,7 @@ const InfoSmall = () => {
                 </Typography>
                 <List disablePadding>
                     <ListItemText>
-                        1. Утренняя группа: 9:00* - 13:00<br/> *дежурная  группа ежедневно принимает детей с 7:00.
+                        1. Утренняя группа: 9:00* - 13:00<br /> *дежурная  группа ежедневно принимает детей с 7:00.
                     </ListItemText>
                     <ListItemText>
                         2. Вечерняя группа: 16:00 - 20:00
@@ -113,17 +113,17 @@ const InfoSmall = () => {
                 </List>
             </Box>
             <Box>
-                <Typography variant="h4" textAlign='center'>
+                <Typography variant="h4" textAlign='center' sx={{ mt: 4 }}>
                     Основные группы
                 </Typography>
                 <Typography variant="body2" textAlign='center'>
                     Выберите интересующую вас группу
                 </Typography>
                 <Box>
-                    <ListText name='1️⃣ Ясельная'>
+                    <ListText name='1️⃣ Ясли'>
                         <Box>
                             <Typography variant="h5">
-                                1️⃣ Ясельная группа
+                                1️⃣ Ясли
                             </Typography>
                             <List disablePadding>
                                 <ListItemText>
@@ -297,7 +297,7 @@ const InfoSmall = () => {
                 </Box>
             </Box>
             <Box>
-                <Typography variant="h4" textAlign='center'>
+                <Typography variant="h4" textAlign='center' sx={{ mt: 4 }}>
                     Дополнительные группы
                 </Typography>
                 <Typography variant="body2" textAlign='center'>
@@ -513,7 +513,7 @@ const InfoSmall = () => {
                 </Box>
             </Box>
             <Box>
-                <Typography variant="h4" textAlign='center'>
+                <Typography variant="h4" textAlign='center' sx={{ mt: 4 }}>
                     А также
                 </Typography>
                 <List>
@@ -535,7 +535,7 @@ const InfoSmall = () => {
                 </List>
             </Box>
             <Form center m />
-            <Typography variant="h6" textAlign='center'>
+            <Typography variant="h6" textAlign='center' sx={{ my: 2 }} data-aos='fade-up'>
                 Праздничное открытие состоится <b>16 сентября!</b> Ждём вас в гости с 16:00 до 20:00 🎈Будет много угощений, анимационная программа, конкурсы и мастер-классы 🎉
             </Typography>
         </Box>

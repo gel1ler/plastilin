@@ -54,7 +54,7 @@ export default function Home() {
       anchorPlacement: 'bottom-bottom',
     })
     AOS.refresh()
-    setTimeout(() => setLoading(false), 1500)
+    setTimeout(() => setLoading(false), 500)
   }, [])
   return (
 

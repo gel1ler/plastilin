@@ -65,12 +65,17 @@ export default function Page() {
     return (
         <ThemeProvider theme={theme}>
             <Loader loading={loading} />
-            <Falling />
-            <Header />
-            <main>
-                {isSmallScreen ? <InfoSmall/> : <Info /> }
-            </main>
-            <Footer />
+            {loading ?
+                null :
+                <>
+                    <Falling />
+                    <Header />
+                    <main>
+                        {isSmallScreen ? <InfoSmall /> : <Info />}
+                    </main>
+                    <Footer />
+                </>
+            }
         </ThemeProvider>
     )
 }
