@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    assetPrefix: './',
+    assetPrefix: 'https://plastilin-deti.ru/',
+    trailingSlash: true,
     images: {
         unoptimized: true,
     }
