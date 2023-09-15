@@ -10,6 +10,7 @@ import Loader from '../loader/loader'
 import Info from '@/components/pages/groups/info';
 import InfoSmall from '@/components/pages/groups/info-small';
 import { Typography, useMediaQuery } from '@mui/material';
+import Head from 'next/head';
 
 const theme = createTheme({
     typography: {
@@ -45,10 +46,6 @@ const theme = createTheme({
     },
 })
 
-export const metadata = {
-    title: "Пластилин - группы",
-}
-
 export default function Page() {
     const [loading, setLoading] = useState(true)
 
@@ -64,6 +61,10 @@ export default function Page() {
 
     return (
         <ThemeProvider theme={theme}>
+            <Head>
+                <title>Пластилин - группы</title>
+                <meta name="description" content="5 групп детского цетра Пластилин от 1.2 года" />
+            </Head>
             <Loader loading={loading} />
             {loading ?
                 null :

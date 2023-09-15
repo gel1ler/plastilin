@@ -33,7 +33,6 @@ const About = ({ main }) => {
                 gap: [8, 8, 16]
             }}
         >
-
             <Slider imageRef={imageRef} />
             <Things />
             <Teachers />

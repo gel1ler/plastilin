@@ -21,7 +21,7 @@ const Loader = ({ loading }) => {
                 visibility: loading ? 'visible' : 'hidden'
             }}
         >
-            <Box sx={{ width: '80vw', height: '100vh', maxWidth: '300px' }} className='center'>
+            <Box sx={{ width: '80vw', height: '100vh', maxWidth: '300px' }} className='centered'>
                 <svg className='index' id="_Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440.650471 340.890501">
                     <g>
                         <circle className="circle" cx="220.325235" cy="123.128119" r="97.022748" />

@@ -1,7 +1,7 @@
 import { Box, Dialog, Typography, List, ListItemText, Divider } from '@mui/material'
 import React, { useState } from 'react'
 import Link from 'next/link'
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 import Form from '@/components/UI/form';
 
 const ListText = ({ children, name }) => {
@@ -51,7 +51,7 @@ const InfoSmall = () => {
             <Link href='/'>
                 <Typography
                     variant='body2'
-                    className='center'
+                    className='centered'
                     sx={{
                         width: 'max-content'
                     }}
@@ -536,7 +536,7 @@ const InfoSmall = () => {
             </Box>
             <Form center m />
             <Typography variant="h6" textAlign='center' sx={{ my: 2 }} data-aos='fade-up'>
-                Праздничное открытие состоится <b>16 сентября!</b> Ждём вас в гости с 16:00 до 20:00 🎈Будет много угощений, анимационная программа, конкурсы и мастер-классы 🎉
+                Праздничное открытие состоится <b>23 сентября!</b> Ждём вас в гости с 11:00 до 19:00 🎈Будет много угощений, анимационная программа, конкурсы и мастер-классы 🎉
             </Typography>
         </Box>
     )

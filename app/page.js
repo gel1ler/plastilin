@@ -59,6 +59,13 @@ export default function Home() {
   return (
 
     <ThemeProvider theme={theme}>
+      <Head>
+        <title>Пластилин - детский центр в Раменском</title>
+        <meta
+          name="description"
+          content="Группы от 1 года и 2 месяцев. Развитие софт скилс. Опытные педагоги, которые знают, как работать с детьми нового поколения."
+        />
+      </Head>
       <Loader loading={loading} />
       <Falling />
       <Header main />
