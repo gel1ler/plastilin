@@ -1,16 +1,11 @@
 import React, { useRef, useEffect } from 'react'
-import { Box, Typography } from '@mui/material'
-import Image from 'next/image'
-import { useTheme } from '@mui/material/styles'
-import half from '@/public/falling/half.svg'
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
+import { Box } from '@mui/material'
 import Slider from './slider'
-import { what } from './data'
 import Things from './things/things'
 import Teachers from './teachers/teachers'
 
 
-const About = ({ main }) => {
+const About = () => {
     const imageRef = useRef()
 
     useEffect(() => {

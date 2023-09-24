@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
-import { begin as arr } from './data'
+import { begin as arr } from '../../../../data'
 import half from '@/public/falling/half.svg'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 

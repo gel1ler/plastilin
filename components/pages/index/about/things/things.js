@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
-import { what } from '../data'
+import { what } from '../../../../../data'
 import { useMediaQuery } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 

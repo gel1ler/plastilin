@@ -39,7 +39,7 @@ const Contacts = () => {
           </Link>
         </Typography>
         <iframe
-          src="https://yandex.ru/map-widget/v1/?ll=38.230160%2C55.577847&mode=whatshere&whatshere%5Bpoint%5D=38.230161%2C55.577846&whatshere%5Bzoom%5D=17&z=16"
+          src="https://yandex.ru/map-widget/v1/?z=16&ol=biz&oid=12416694636"
           frameBorder={0}
           allowFullScreen={true}
           style={{

@@ -37,6 +37,10 @@ const Menu = ({ close, main }) => {
             {
                 href: '/groups',
                 name: 'Группы'
+            },
+            {
+                href: '/teachers',
+                name: 'Педагоги'
             }
         ]
 
