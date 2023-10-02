@@ -7,8 +7,6 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from 'react'
 import Falling from '@/components/UI/background/falling'
 import Loader from '@/components/UI/loader/loader'
-import Info from '@/components/pages/groups/info'
-import InfoSmall from '@/components/pages/groups/info-small'
 
 const theme = createTheme({
     typography: {

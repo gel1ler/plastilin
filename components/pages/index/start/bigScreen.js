@@ -44,8 +44,8 @@ const BigScreen = () => {
             id='home'
             className='column-centered'
             sx={{
-                height: 'calc(100vh - 70px)',
-                mt: '70px',
+                height: 'calc(100vh - 90px)',
+                mt: '90px',
                 width: '100%',
             }}
         >

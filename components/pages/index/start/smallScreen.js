@@ -14,7 +14,7 @@ const SmallScreen = () => {
             id='home'
             className='column-centered'
             sx={{
-                mt: '70px',
+                mt: '90px',
                 height: '90svh',
                 mx: 'auto',
                 minHeight: '570px',

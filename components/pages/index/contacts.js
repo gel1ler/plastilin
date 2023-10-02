@@ -34,7 +34,14 @@ const Contacts = () => {
         </Typography>
         <Typography data-aos='fade-right' textAlign='center' sx={{ mb: 2 }}>
           Адрес:{' '}
-          <Link href='https://yandex.ru/maps/10750/ramenskoe/house/ulitsa_svobody_6a/Z0EYdARgSEMGQFtvfXl2dnRnYg==/?ll=38.230160%2C55.577847&utm_medium=mapframe&utm_source=maps&z=17"'>
+          <Link
+            target='_blank'
+            href='https://yandex.ru/maps/10750/ramenskoe/house/ulitsa_svobody_6a/Z0EYdARgSEMGQFtvfXl2dnRnYg==/?ll=38.230160%2C55.577847&utm_medium=mapframe&utm_source=maps&z=17"'
+            style={{
+              fontWeight: 'bold',
+              textDecoration: 'underline'
+            }}
+          >
             г. Раменское, ул. Свободы, д. 6А
           </Link>
         </Typography>

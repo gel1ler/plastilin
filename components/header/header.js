@@ -1,5 +1,5 @@
 'use client'
-import { Box, useMediaQuery } from '@mui/material'
+import { Box, Typography, useMediaQuery } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 import React, { useState, useEffect } from 'react'
 import { Menu } from '@mui/icons-material'
@@ -11,6 +11,7 @@ import MyDrawer from './drawer'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '../icons'
 import Link from 'next/link'
+import PlaceIcon from '@mui/icons-material/Place'
 
 const Header = ({ main }) => {
     const theme = useTheme()
@@ -43,7 +44,7 @@ const Header = ({ main }) => {
                     bgcolor: 'white',
                     zIndex: 900,
                     transition: 'box-shadow .2s ease-out',
-                    height: '70px'
+                    height: '90px'
                 }}
                 className={isActive ? 'shadow' : null}
             >
@@ -76,6 +77,7 @@ const Header = ({ main }) => {
                             position: 'relative',
                             my: 1,
                             display: 'flex',
+                            flexDirection: 'column',
                             justifyContent: 'center',
                             alignItems: 'center',
                             height: 'min-content',
@@ -98,6 +100,9 @@ const Header = ({ main }) => {
                                 />
                             </Link>
                         }
+                        <Typography sx={{ fontFamily: 'Intro-Bold', color: 'primary.main', letterSpacing: '2px', gap: '3px', mt: '2px' }} className='centered'>
+                            <PlaceIcon fontSize='small' /> Раменское, Свободы 6А
+                        </Typography>
                     </Box>
                     <Box
                         sx={{
@@ -154,8 +159,9 @@ const Header = ({ main }) => {
                         ml: 2,
                         my: 1,
                         display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
+                        flexDirection: 'column',
+                        // justifyContent: 'center',
+                        // alignItems: 'center',
                         height: 'min-content',
                     }}
                 >
@@ -164,7 +170,7 @@ const Header = ({ main }) => {
                             <Image
                                 alt='Логотип детского центра Пластилин'
                                 src={logo}
-                                style={{ objectFit: 'contain', height: '38px', width: 'min-content', display: 'block' }}
+                                style={{ objectFit: 'contain', height: '35px', width: 'min-content', display: 'block' }}
                             />
                         </AnchorLink>
                         :
@@ -172,10 +178,13 @@ const Header = ({ main }) => {
                             <Image
                                 alt='Логотип детского центра Пластилин'
                                 src={logo}
-                                style={{ objectFit: 'contain', height: '38px', width: 'min-content', display: 'block' }}
+                                style={{ objectFit: 'contain', height: '35px', width: 'min-content', display: 'block' }}
                             />
                         </Link>
                     }
+                    <Typography sx={{ fontSize: '11px', fontFamily: 'Intro-Bold', color: 'primary.main', letterSpacing: '2px', gap: '3px', mt: '2px' }} className='centered'>
+                        <PlaceIcon sx={{fontSize: '15px'}} /> Раменское, Свободы 6А
+                    </Typography>
                 </Box>
                 <Box
                     sx={{
