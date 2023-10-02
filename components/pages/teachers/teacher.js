@@ -17,7 +17,7 @@ const Teacher = ({ i }) => {
 
     return (
         <Box
-            // data-aos='fade-up'
+            data-aos='fade-up'
             className='column-centered'
             sx={{
                 gap: 1,
