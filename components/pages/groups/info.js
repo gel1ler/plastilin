@@ -30,7 +30,7 @@ const Info = () => {
             <Typography variant='h3'>
                 Пять возрастных групп от <b>1 года и 2 месяцев</b>
             </Typography>
-            <Box sx={{bgcolor: 'additional.main', p:2, width: 'max-content', borderRadius: '20px'}}>
+            <Box sx={{ bgcolor: 'additional.main', p: 2, width: 'max-content', borderRadius: '20px' }}>
                 <Typography variant='h5'>
                     Продолжительность:
                 </Typography>
@@ -43,7 +43,7 @@ const Info = () => {
                     </ListItemText>
                 </List>
             </Box>
-            <Box sx={{bgcolor: 'secondary.main', p:2, width: '70%', borderRadius: '20px'}}>
+            <Box sx={{ bgcolor: 'secondary.main', p: 2, width: '70%', borderRadius: '20px' }}>
                 <Typography variant='h5'>
                     Распорядок дня:
                 </Typography>
@@ -115,9 +115,6 @@ const Info = () => {
                 </List>
             </Box>
             <Form center m />
-            <Typography variant="h6" textAlign='center' data-aos='fade-up'>
-                Праздничное открытие состоится <b>23 сентября!</b> Ждём вас в гости с 11:00 до 19:00 🎈Будет много угощений, анимационная программа, конкурсы и мастер-классы 🎉
-            </Typography>
         </Box>
     )
 }

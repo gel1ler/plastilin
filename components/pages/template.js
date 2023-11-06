@@ -47,7 +47,7 @@ export default function Template({ children, main }) {
 
     useEffect(() => {
         AOS.init({
-            anchorPlacement: 'bottom-bottom',
+            anchorPlacement: 'center-bottom',
         })
         AOS.refresh()
         setTimeout(() => setLoading(false), 1500)

@@ -89,7 +89,7 @@ const SmallScreen = () => {
                         borderRadius: '15px'
                     }}
                 >
-                    Записаться на пробное занятие
+                    Записаться на пробное посещение
                 </Button>
             </AnchorLink> */}
         </Box>

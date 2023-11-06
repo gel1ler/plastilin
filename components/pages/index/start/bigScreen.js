@@ -69,6 +69,7 @@ const BigScreen = () => {
                         <Image
                             key={key}
                             alt='Дети из детского центра Пластилин'
+                            priority
                             src={image}
                             style={{
                                 objectFit: 'cover',
@@ -125,19 +126,6 @@ const BigScreen = () => {
                             Подробнее
                         </Button>
                     </Link>
-                    {/* <AnchorLink href='#form'>
-                        <Button
-                            variant='contained'
-                            sx={{
-                                p: 2,
-                                mb: 2,
-                                width: '100%',
-                                borderRadius: '15px'
-                            }}
-                        >
-                            Записаться на пробное занятие
-                        </Button>
-                    </AnchorLink> */}
                 </Box>
             </Box>
         </Box>

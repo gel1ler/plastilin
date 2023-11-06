@@ -183,7 +183,7 @@ const Header = ({ main }) => {
                         </Link>
                     }
                     <Typography sx={{ fontSize: '11px', fontFamily: 'Intro-Bold', color: 'primary.main', letterSpacing: '2px', gap: '3px', mt: '2px' }} className='centered'>
-                        <PlaceIcon sx={{fontSize: '15px'}} /> Раменское, Свободы 6А
+                        <PlaceIcon sx={{ fontSize: '15px' }} /> Раменское, Свободы 6А
                     </Typography>
                 </Box>
                 <Box

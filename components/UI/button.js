@@ -14,7 +14,7 @@ const MyButton = ({link, pName, cName, age, disabled }) => {
             ageText = 'лет'
         }
 
-        const text = `Здравствуйте, меня зовут ${pName}. Моего ребенка ${cName} (${age} ${ageText}). Запишите, пожалуйста, на пробное занятие в вашем детском центре.`
+        const text = `Здравствуйте, меня зовут ${pName}. Моего ребенка ${cName} (${age} ${ageText}). Запишите, пожалуйста, на пробное посещение в вашем детском центре.`
         window.open(`https://api.whatsapp.com/send?phone=+79168688788&text=${text}`, '_blank');
     }
 
@@ -30,7 +30,7 @@ const MyButton = ({link, pName, cName, age, disabled }) => {
             }}
             onClick={() => sendMsg('Hello')}
         >
-            Записаться на пробное занятие
+            Записаться на пробное посещение
         </Button>
     )
 }

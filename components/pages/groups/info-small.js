@@ -149,7 +149,7 @@ const InfoSmall = () => {
                                     * группа входного дня: 1.700 р / день
                                 </ListItemText >
                                 <ListItemText >
-                                    * первое пробное занятие - бесплатно
+                                    * первое пробное посещение - бесплатно
                                 </ListItemText >
                             </List >
                         </Box>
@@ -184,7 +184,7 @@ const InfoSmall = () => {
                                     * группа входного дня: 1.700 р / день
                                 </ListItemText >
                                 <ListItemText >
-                                    * первое пробное занятие - бесплатно
+                                    * первое пробное посещение - бесплатно
                                 </ListItemText >
                             </List >
                         </Box>
@@ -219,7 +219,7 @@ const InfoSmall = () => {
                                     * группа входного дня: 1.500 р / день
                                 </ListItemText >
                                 <ListItemText >
-                                    * первое пробное занятие - бесплатно
+                                    * первое пробное посещение - бесплатно
                                 </ListItemText >
                             </List >
                         </Box>
@@ -254,7 +254,7 @@ const InfoSmall = () => {
                                     * группа входного дня: 1.500 р / день
                                 </ListItemText >
                                 <ListItemText >
-                                    * первое пробное занятие - бесплатно
+                                    * первое пробное посещение - бесплатно
                                 </ListItemText >
                             </List >
                         </Box>
@@ -289,7 +289,7 @@ const InfoSmall = () => {
                                     * группа входного дня: 1.500 р / день
                                 </ListItemText >
                                 <ListItemText >
-                                    * первое пробное занятие - бесплатно
+                                    * первое пробное посещение - бесплатно
                                 </ListItemText >
                             </List >
                         </Box>
@@ -339,7 +339,7 @@ const InfoSmall = () => {
                                     * разовое посещение: 1.500 р/день
                                 </ListItemText>
                                 <ListItemText >
-                                    * первое пробное занятие - бесплатно
+                                    * первое пробное посещение - бесплатно
                                 </ListItemText >
                             </List >
                         </Box>
@@ -432,7 +432,7 @@ const InfoSmall = () => {
                                     * Разовое посещение: 1.300 р / 1 раз
                                 </ListItemText>
                                 <ListItemText >
-                                    * первое пробное занятие - бесплатно
+                                    * первое пробное посещение - бесплатно
                                 </ListItemText >
                             </List >
                         </Box>
@@ -505,7 +505,7 @@ const InfoSmall = () => {
                                     * абонемент 12.500 р / мес - по 2 раза в неделю
                                 </ListItemText>
                                 <ListItemText>
-                                    * первое пробное занятие - бесплатно
+                                    * первое пробное посещение - бесплатно
                                 </ListItemText>
                             </List >
                         </Box>

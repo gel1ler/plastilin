@@ -1,4 +1,4 @@
-import { Box, Dialog, Typography, List, ListItemText, Tabs, Tab } from '@mui/material'
+import { Box, Dialog, Typography, List, ListItemText, Tabs, Tab, Paper } from '@mui/material'
 import React, { useState } from 'react'
 
 
@@ -14,7 +14,7 @@ function TabPanel(props) {
         >
             {value === index && (
                 <Box sx={{ p: 3 }}>
-                    <Typography>{children}</Typography>
+                    {children}
                 </Box>
             )}
         </div>
@@ -51,7 +51,7 @@ const MyTabs = ({ value, handleChange }) => {
                     </Typography>
                     <List disablePadding>
                         <ListItemText>
-                            * 5 раз в неделю: 19.500 р/месяц
+                            * 5 раз в неделю: 21.500 р/месяц
                         </ListItemText>
                         <ListItemText>
                             * разовое посещение: 1.700 р/день
@@ -60,7 +60,7 @@ const MyTabs = ({ value, handleChange }) => {
                             * группа входного дня: 1.700 р / день
                         </ListItemText >
                         <ListItemText >
-                            * первое пробное занятие - бесплатно
+                            * первое пробное посещение - бесплатно
                         </ListItemText >
                     </List >
                 </Box>
@@ -85,7 +85,7 @@ const MyTabs = ({ value, handleChange }) => {
                     </Typography>
                     <List disablePadding>
                         <ListItemText>
-                            * 5 раз в неделю: 19.500 р/месяц
+                            * 5 раз в неделю: 21.500 р/месяц
                         </ListItemText>
                         <ListItemText>
                             * разовое посещение: 1.700 р/день
@@ -94,7 +94,7 @@ const MyTabs = ({ value, handleChange }) => {
                             * группа входного дня: 1.700 р / день
                         </ListItemText >
                         <ListItemText >
-                            * первое пробное занятие - бесплатно
+                            * первое пробное посещение - бесплатно
                         </ListItemText >
                     </List >
                 </Box>
@@ -119,7 +119,7 @@ const MyTabs = ({ value, handleChange }) => {
                     </Typography>
                     <List disablePadding>
                         <ListItemText>
-                            * 5 раз в неделю: 17.500 р / месяц
+                            * 5 раз в неделю: 19.500 р / месяц
                         </ListItemText>
                         <ListItemText>
                             * разовое посещение: 1.500 р / день
@@ -128,7 +128,7 @@ const MyTabs = ({ value, handleChange }) => {
                             * группа входного дня: 1.500 р / день
                         </ListItemText >
                         <ListItemText >
-                            * первое пробное занятие - бесплатно
+                            * первое пробное посещение - бесплатно
                         </ListItemText >
                     </List >
                 </Box>
@@ -153,7 +153,7 @@ const MyTabs = ({ value, handleChange }) => {
                     </Typography>
                     <List disablePadding>
                         <ListItemText>
-                            * 5 раз в неделю: 17.500 р / месяц
+                            * 5 раз в неделю: 19.500 р / месяц
                         </ListItemText>
                         <ListItemText>
                             * разовое посещение: 1.500 р / день
@@ -162,7 +162,7 @@ const MyTabs = ({ value, handleChange }) => {
                             * группа входного дня: 1.500 р / день
                         </ListItemText >
                         <ListItemText >
-                            * первое пробное занятие - бесплатно
+                            * первое пробное посещение - бесплатно
                         </ListItemText >
                     </List >
                 </Box>
@@ -170,7 +170,7 @@ const MyTabs = ({ value, handleChange }) => {
             <TabPanel value={value} index={4}>
                 <Box>
                     <Typography variant="h5">
-                    5️⃣ Подготовительная группа.
+                        5️⃣ Подготовительная группа.
                     </Typography>
                     <List disablePadding>
                         <ListItemText>
@@ -187,7 +187,7 @@ const MyTabs = ({ value, handleChange }) => {
                     </Typography>
                     <List disablePadding>
                         <ListItemText>
-                            * 5 раз в неделю: 17.500 р / месяц
+                            * 5 раз в неделю: 19.500 р / месяц
                         </ListItemText>
                         <ListItemText>
                             * разовое посещение: 1.500 р / день
@@ -196,7 +196,7 @@ const MyTabs = ({ value, handleChange }) => {
                             * группа входного дня: 1.500 р / день
                         </ListItemText >
                         <ListItemText >
-                            * первое пробное занятие - бесплатно
+                            * первое пробное посещение - бесплатно
                         </ListItemText >
                     </List >
                 </Box>

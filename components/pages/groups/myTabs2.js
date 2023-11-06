@@ -14,7 +14,7 @@ function TabPanel(props) {
         >
             {value === index && (
                 <Box sx={{ p: 3 }}>
-                    <Typography>{children}</Typography>
+                    {children}
                 </Box>
             )}
         </div>
@@ -65,7 +65,7 @@ const MyTabs2 = ({ value, handleChange }) => {
                             * разовое посещение: 1.500 р/день
                         </ListItemText>
                         <ListItemText >
-                            * первое пробное занятие - бесплатно
+                            * первое пробное посещение - бесплатно
                         </ListItemText >
                     </List >
                 </Box>
@@ -145,22 +145,6 @@ const MyTabs2 = ({ value, handleChange }) => {
                         * Шахматы
                     </ListItemText>
                 </List>
-                <Box>
-                    <Typography variant="h6">
-                        Стоимость:
-                    </Typography>
-                    <List disablePadding>
-                        <ListItemText>
-                            * Абонемент: 8.500 р 2 раза в неделю
-                        </ListItemText>
-                        <ListItemText>
-                            * Разовое посещение: 1.300 р / 1 раз
-                        </ListItemText>
-                        <ListItemText >
-                            * первое пробное занятие - бесплатно
-                        </ListItemText >
-                    </List >
-                </Box>
             </TabPanel >
             <TabPanel value={value} index={2}>
                 <Box>
@@ -193,16 +177,6 @@ const MyTabs2 = ({ value, handleChange }) => {
                         * Подготовка к ОГЭ, ЕГЭ
                     </ListItemText>
                 </List>
-                <Box>
-                    <Typography variant="h6">
-                        Стоимость:
-                    </Typography>
-                    <List disablePadding>
-                        <ListItemText>
-                            1.900 - 2500 р / занятие
-                        </ListItemText>
-                    </List >
-                </Box>
             </TabPanel >
             <TabPanel value={value} index={3}>
                 <Box>
@@ -228,7 +202,7 @@ const MyTabs2 = ({ value, handleChange }) => {
                             * абонемент 12.500 р / мес - по 2 раза в неделю
                         </ListItemText>
                         <ListItemText>
-                            * первое пробное занятие - бесплатно
+                            * первое пробное посещение - бесплатно
                         </ListItemText>
                     </List >
                 </Box>

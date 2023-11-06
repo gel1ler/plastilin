@@ -9,13 +9,19 @@ const About = () => {
     const imageRef = useRef()
 
     useEffect(() => {
-        window.addEventListener('scroll', event => {
+        const handleScroll = () => {
             requestAnimationFrame(() => {
                 const rotation = window.scrollY / 15
-                imageRef.current.style.transform = `rotate(${rotation}deg)`;
-            });
-        });
-    }, []);
+                imageRef.current.style.transform = `rotate(${rotation}deg)`
+            })
+        }
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
 
     return (
         <Box
