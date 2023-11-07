@@ -140,7 +140,7 @@ const InfoSmall = () => {
                             </Typography>
                             <List disablePadding>
                                 <ListItemText>
-                                    * 5 раз в неделю: 19.500 р/месяц
+                                    * 5 раз в неделю: 21.500 р/месяц
                                 </ListItemText>
                                 <ListItemText>
                                     * разовое посещение: 1.700 р/день
@@ -175,7 +175,7 @@ const InfoSmall = () => {
                             </Typography>
                             <List disablePadding>
                                 <ListItemText>
-                                    * 5 раз в неделю: 19.500 р/месяц
+                                    * 5 раз в неделю: 21.500 р/месяц
                                 </ListItemText>
                                 <ListItemText>
                                     * разовое посещение: 1.700 р/день
@@ -210,7 +210,7 @@ const InfoSmall = () => {
                             </Typography>
                             <List disablePadding>
                                 <ListItemText>
-                                    * 5 раз в неделю: 17.500 р / месяц
+                                    * 5 раз в неделю: 19.500 р / месяц
                                 </ListItemText>
                                 <ListItemText>
                                     * разовое посещение: 1.500 р / день
@@ -245,7 +245,7 @@ const InfoSmall = () => {
                             </Typography>
                             <List disablePadding>
                                 <ListItemText>
-                                    * 5 раз в неделю: 17.500 р / месяц
+                                    * 5 раз в неделю: 19.500 р / месяц
                                 </ListItemText>
                                 <ListItemText>
                                     * разовое посещение: 1.500 р / день
@@ -280,7 +280,7 @@ const InfoSmall = () => {
                             </Typography>
                             <List disablePadding>
                                 <ListItemText>
-                                    * 5 раз в неделю: 17.500 р / месяц
+                                    * 5 раз в неделю: 19.500 р / месяц
                                 </ListItemText>
                                 <ListItemText>
                                     * разовое посещение: 1.500 р / день
@@ -353,7 +353,6 @@ const InfoSmall = () => {
                                 </ListItemText>
                                 <ListItemText>
                                     - Перекус (представляет детский центр)
-
                                 </ListItemText>
                                 <ListItemText >
                                     - Школьное домашнее задание
@@ -420,22 +419,6 @@ const InfoSmall = () => {
                                 * Шахматы
                             </ListItemText>
                         </List>
-                        <Box>
-                            <Typography variant="h6">
-                                Стоимость:
-                            </Typography>
-                            <List disablePadding>
-                                <ListItemText>
-                                    * Абонемент: 8.500 р 2 раза в неделю
-                                </ListItemText>
-                                <ListItemText>
-                                    * Разовое посещение: 1.300 р / 1 раз
-                                </ListItemText>
-                                <ListItemText >
-                                    * первое пробное посещение - бесплатно
-                                </ListItemText >
-                            </List >
-                        </Box>
                     </ListText>
                     <Divider />
                     <ListText name='🟢 Индивидуальные программы'>
@@ -469,22 +452,12 @@ const InfoSmall = () => {
                                 * Подготовка к ОГЭ, ЕГЭ
                             </ListItemText>
                         </List>
-                        <Box>
-                            <Typography variant="h6">
-                                Стоимость:
-                            </Typography>
-                            <List disablePadding>
-                                <ListItemText>
-                                    1.900 - 2500 р / занятие
-                                </ListItemText>
-                            </List >
-                        </Box>
                     </ListText>
                     <Divider />
                     <ListText name='🟢 Школа будущего первоклассника.'>
                         <Box>
                             <Typography variant="h5">
-                                🟢 Школа будущего первоклассника.
+                                🟢 Школа будущего первоклассника
                             </Typography>
                             <List disablePadding>
                                 <ListItemText>
@@ -535,9 +508,6 @@ const InfoSmall = () => {
                 </List>
             </Box>
             <Form center m />
-            <Typography variant="h6" textAlign='center' sx={{ my: 2 }} data-aos='fade-up'>
-                Праздничное открытие состоится <b>23 сентября!</b> Ждём вас в гости с 11:00 до 19:00 🎈Будет много угощений, анимационная программа, конкурсы и мастер-классы 🎉
-            </Typography>
         </Box>
     )
 }
