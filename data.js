@@ -53,7 +53,7 @@ export const what = [
 
 export const people = [
     {
-        photo: '/people/nat.jpeg',
+        photo: '/people/nat.webp',
         name: "Наталья",
         fullName: 'Гончарова Наталья Викторовна',
         description: (
@@ -67,7 +67,7 @@ export const people = [
         )
     },
     {
-        photo: '/people/elena.jpeg',
+        photo: '/people/elena.webp',
         name: "Елена",
         fullName: 'Давляшина Елена Александровна',
         description: (<span>
