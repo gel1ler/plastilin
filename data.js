@@ -7,19 +7,22 @@ import eticet from '@/public/icons/eticet.svg'
 import mic from '@/public/icons/mic.svg'
 import brain from '@/public/icons/brain.svg'
 import books from '@/public/icons/books.svg'
+import nat from '@/public/people/nat.jpeg'
+import elena from '@/public/people/elena.jpeg'
+
 
 export const begin = [
     {
-        image: '/children/1.jpg',
+        image: image1,
         text: 'Сначала - мягкий и податливый',
         // additionalText: 'Сначала - мягкий и податливый',
     },
     {
-        image: '/children/2.jpg',
+        image: image2,
         text: 'Но со временем он твердеет и чтобы что-то изменить, приходится ломать форму'
     },
     {
-        image: '/children/3.jpg',
+        image: image3,
         text: (<span>Поэтому так важно все закладывать с самого <b>детства</b></span>)
     },
 ]
@@ -27,33 +30,33 @@ export const begin = [
 export const what = [
     {
         name: 'Развитие личности и эмоционального интеллекта',
-        icon: '/icons/puzzle.svg'
+        icon: puzzle
     },
     {
         name: 'Театральный кружок',
-        icon: '/icons/theater.svg'
+        icon: theater
     },
     {
         name: 'Уроки этикета',
-        icon: '/icons/eticet.svg'
+        icon: eticet
     },
     {
         name: 'Ораторское искусство',
-        icon: '/icons/mic.svg'
+        icon: mic
     },
     {
         name: 'Нейропсихология',
-        icon: '/icons/brain.svg'
+        icon: brain
     },
     {
         name: 'Развивающие программы',
-        icon: '/icons/books.svg'
+        icon: books
     },
 ]
 
 export const people = [
     {
-        photo: '/people/nat.webp',
+        photo: nat,
         name: "Наталья",
         fullName: 'Гончарова Наталья Викторовна',
         description: (
@@ -67,7 +70,7 @@ export const people = [
         )
     },
     {
-        photo: '/people/elena.webp',
+        photo: elena,
         name: "Елена",
         fullName: 'Давляшина Елена Александровна',
         description: (<span>
