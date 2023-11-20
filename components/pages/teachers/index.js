@@ -36,7 +36,7 @@ const Index = () => {
               }}
             >
               <Image
-                src={teacher}
+                src='/people/teacher.jpg'
                 fill
                 alt='Педагог'
                 style={{

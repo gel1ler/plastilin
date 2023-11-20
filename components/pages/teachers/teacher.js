@@ -63,6 +63,8 @@ const Teacher = ({ i }) => {
             <Image
                 alt='Преподаватель детского центра Пластилин'
                 src={i.photo ? i.photo : stock}
+                width={160}
+                height={160}
                 style={{
                     objectFit: 'cover',
                     minWidth: 160,
