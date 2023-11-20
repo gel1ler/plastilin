@@ -1,6 +1,6 @@
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
-import { people } from '@/../data'
+import { people } from '../../../../../data'
 import Teacher from './teacher'
 import ArrowText from '@/components/UI/text/arrowText'
 
