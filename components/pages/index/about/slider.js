@@ -4,29 +4,45 @@ import Image from 'next/image'
 import { begin as arr } from '../../../../data'
 import half from '@/public/falling/half.svg'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
+import Plx from 'react-plx'
 
-const Slider = ({ imageRef }) => {
+const data = [
+    {
+        start: 0,
+        end: '150vh',
+        properties: [
+            {
+                startValue: 0,
+                endValue: 90,
+                property: "rotate",
+            }
+        ]
+    },
+]
+
+const Slider = () => {
     return (
         <Box sx={{ width: '100vw' }}>
             <Box sx={{ position: 'relative' }}>
-                <Typography data-aos='fade-up' variant='h4' textAlign='center'>Характер человека, как <b>пластилин</b></Typography>
-                <Image
-                    id='about'
-                    alt='Часть логотипа детского центра Пластилин'
-                    data-aos='fade-up'
-                    ref={imageRef}
-                    src={half}
-                    style={{
-                        position: 'absolute',
-                        objectFit: 'contain',
-                        zIndex: -1,
-                        opacity: 0.5,
-                        top: -30,
-                        left: 0,
-                        right: 0,
-                        margin: '0 auto'
-                    }}
-                />
+                <Typography sx={{position:'relative', zIndex: 2}} data-aos='fade-up' variant='h4' textAlign='center'>Характер человека, как <b>пластилин</b></Typography>
+                <Plx parallaxData={data}>
+                    <Image
+                        id='about'
+                        alt='Часть логотипа детского центра Пластилин'
+                        data-aos='fade-up'
+                        src={half}
+                        style={{
+                            position: 'absolute',
+                            objectFit: 'contain',
+                            zIndex: 1,
+                            top: -60,
+                            left: -60,
+                            opacity: 0.6,
+                            right: 0,
+                            margin: '0 auto'
+                        }}
+                    />
+                </Plx>
                 <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 1, display: ['flex', 'flex', 'none'] }} data-aos='fade-up'>
                     <Typography variant="body2">
                         Листайте вправо

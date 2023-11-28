@@ -1,28 +1,79 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material'
+import { Box, Container, Typography } from '@mui/material'
+import Image from 'next/image'
+import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from './icons'
+import Link from 'next/link'
+
+const Text = ({ href, children }) =>
+    <Link href={href}>
+        <Typography fontSize='large' sx={{ transition: 'all .15s ease-out', ':hover': { color: 'primary.main' } }}>
+            {children}
+        </Typography>
+    </Link>
 
 const Footer = () => {
     return (
         <Box
             className='column-centered'
             sx={{
-                bgcolor: 'secondary.main',
+                bgcolor: '#f1f1f1',
                 justifyContent: 'space-between',
                 gap: 1,
-                py: 2,
+                py: 4,
                 width: '100%'
             }}
         >
-            <Box>
-            </Box>
-            <Typography variant='h6' textAlign='center'>
-                Детский центр Пластилин
-            </Typography>
-            <Typography textAlign='center'>
-                Раменское, ул. Свободы, 6А
-            </Typography>
+            <Container
+                sx={{
+                    display: 'grid',
+                    gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
+                    mb: 4
+                }}
+            >
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, width: '250px' }}>
+                    <Image
+                        src='/logo/logo-gorizontal.svg'
+                        width={250}
+                        height={70}
+                        alt='logo'
+                    />
+                    <Box sx={{ mx: 'auto' }}>
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'space-between',
+                                gap: 1,
+
+                            }}
+                        >
+                            <InstagramIcon />
+                            <VkIcon />
+                            <TelegramIcon />
+                        </Box>
+                        <PhoneCall />
+                    </Box>
+                </Box>
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                    <Typography variant='h5'>
+                        Информация
+                    </Typography>
+                    <Text href='#about_anchor'>О нас</Text>
+                    <Text href='/agreement'>Пользовательское соглашение</Text>
+                    <Text href='#about_anchor'>Персональные данные</Text>
+                    <Text href='#about_anchor'>Публичная оферта</Text>
+                </Box>
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                    <Typography variant='h5'>
+                        Услуги
+                    </Typography>
+                    <Text href='#services_anchor'>Знакомство/звонок</Text>
+                    <Text href='#services_anchor'>Разовая консультация</Text>
+                    <Text href='#services_anchor'>Индивидуальное сопровождение</Text>
+                </Box>
+            </Container>
             <Typography variant='body2' textAlign='center'>
-                2023. Все права защищены
+                ©Любое использование либо копирование материалов или подборки материалов сайта, элементов дизайна и оформления допускается лишь с разрешения правообладателя и только со ссылкой на источник: www.plastilin-deti.ru
             </Typography>
         </Box>
     )

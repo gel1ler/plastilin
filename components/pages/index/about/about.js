@@ -6,23 +6,6 @@ import Teachers from './teachers/teachers'
 
 
 const About = () => {
-    const imageRef = useRef()
-
-    useEffect(() => {
-        const handleScroll = () => {
-            requestAnimationFrame(() => {
-                const rotation = window.scrollY / 15
-                imageRef.current.style.transform = `rotate(${rotation}deg)`
-            })
-        }
-
-        window.addEventListener('scroll', handleScroll)
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    }, [])
-
     return (
         <Box
             sx={{
@@ -34,7 +17,7 @@ const About = () => {
                 gap: [8, 8, 16]
             }}
         >
-            <Slider imageRef={imageRef} />
+            <Slider />
             <Things />
             <Teachers />
         </Box >

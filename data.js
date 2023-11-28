@@ -42,7 +42,7 @@ export const what = [
 
 export const people = [
     {
-        photo: '/children/2.jpg',
+        photo: '/people/nat.webp',
         name: "Наталья",
         fullName: 'Гончарова Наталья Викторовна',
         description: (

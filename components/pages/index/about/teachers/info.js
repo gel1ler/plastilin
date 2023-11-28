@@ -28,7 +28,8 @@ const Info = ({ open, onClose, i }) => {
                 <Image
                     alt='Преподаватель детского центра Пластилин'
                     src={i.photo ? i.photo : stock}
-                    width={270}
+                    height={160}
+                    width={160}
                     style={{
                         borderRadius: '100%'
                     }}
