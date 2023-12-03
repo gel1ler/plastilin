@@ -16,7 +16,7 @@ const Loader = ({ loading }) => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 background: 'white',
-                transition: 'all .5s ease-out',
+                transition: 'opacity .5s ease-out',
                 opacity: loading ? 1 : 0,
                 visibility: loading ? 'visible' : 'hidden'
             }}

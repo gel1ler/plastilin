@@ -5,6 +5,7 @@ import { begin as arr } from '../../../../data'
 import half from '@/public/falling/half.svg'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 import Plx from 'react-plx'
+import HelperText from '@/components/UI/text/helperText'
 
 const data = [
     {
@@ -24,7 +25,7 @@ const Slider = () => {
     return (
         <Box sx={{ width: '100vw' }}>
             <Box sx={{ position: 'relative' }}>
-                <Typography sx={{position:'relative', zIndex: 2}} data-aos='fade-up' variant='h4' textAlign='center'>Характер человека, как <b>пластилин</b></Typography>
+                <Typography sx={{ position: 'relative', zIndex: 2 }} data-aos='fade-up' variant='h3' textAlign='center'>Характер человека, как <b>пластилин</b></Typography>
                 <Plx parallaxData={data}>
                     <Image
                         id='about'
@@ -43,12 +44,9 @@ const Slider = () => {
                         }}
                     />
                 </Plx>
-                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 1, display: ['flex', 'flex', 'none'] }} data-aos='fade-up'>
-                    <Typography variant="body2">
-                        Листайте вправо
-                    </Typography>
-                    <ArrowRightAltIcon sx={{ opacity: 0.5, fontSize: 15 }} />
-                </Box>
+                <HelperText arrow onlySmall>
+                    Листайте вправо
+                </HelperText>
             </Box>
             <Box
                 sx={{

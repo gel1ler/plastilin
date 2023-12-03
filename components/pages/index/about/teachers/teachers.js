@@ -1,15 +1,19 @@
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
-import { people } from '../../../../../data'
-import Teacher from './teacher'
+import { teachers } from '../../../../../data'
 import ArrowText from '@/components/UI/text/arrowText'
+import HelperText from '@/components/UI/text/helperText'
+import Teacher from '@/components/pages/teachers/teacher'
 
 const Teachers = () => {
     const theme = useTheme()
     const isLargeScreen = useMediaQuery(theme.breakpoints.up('md'))
     return (
         <Box id='teachers' className='column-centered'>
-            <Typography data-aos='fade-up' variant={isLargeScreen ? 'h3' : 'h4'} textAlign='center'>Наши <b>педагоги</b></Typography>
+            <Typography data-aos='fade-up' variant='h3' textAlign='center'>Наши <b>педагоги</b></Typography>
+            <HelperText>
+                Нажмите для подробной информации
+            </HelperText>
             <Box
                 sx={{
                     display: 'flex',
@@ -20,7 +24,7 @@ const Teachers = () => {
                     my: 2,
                 }}
             >
-                {people.slice(0,3).map((i, key) => <Teacher key={key} i={i} />)}
+                {teachers.slice(0, 3).map((i, key) => <Teacher key={key} i={i} />)}
             </Box>
             <ArrowText variant='h6' type='small' anchor='right' centered href='/teachers'>
                 Полный коллектив педагогов

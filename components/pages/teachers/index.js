@@ -20,7 +20,7 @@ const Index = () => {
               display: 'grid',
               gridTemplateColumns: '1fr 1fr',
               gap: 5,
-              px: [3,3,3]
+              px: [3, 3, 3]
             }}
           >
             <Typography data-aos='fade-up' variant='h4' sx={{ my: 2 }}>

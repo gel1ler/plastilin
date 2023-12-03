@@ -13,8 +13,9 @@ const Info = ({ open, onClose, i }) => {
             }}
         >
             <Box
-                className='column-centered'
                 sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
                     p: 3,
                     gap: 2,
                     overflowY: 'scroll',
@@ -23,18 +24,28 @@ const Info = ({ open, onClose, i }) => {
                 }}
             >
                 <Typography variant='h5' textAlign='center'>
-                    {i.fullName}
+                    {i.name}
                 </Typography>
                 <Image
                     alt='Преподаватель детского центра Пластилин'
                     src={i.photo ? i.photo : stock}
                     width={270}
                     style={{
-                        borderRadius: '100%'
+                        borderRadius: '100%',
+                        margin: '0 auto'
                     }}
                 />
                 <Typography>
-                    {i.description}
+                    <b>Направление:</b> {i.direction}
+                </Typography>
+                <Typography>
+                    <b>Опыт:</b> {i.experience}
+                </Typography>
+                <Typography>
+                    <b>О себе:</b> {i.description}
+                </Typography>
+                <Typography>
+                    <b>Цитата:</b> {i.quote}
                 </Typography>
             </Box>
         </Dialog>

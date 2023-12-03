@@ -27,10 +27,13 @@ const Footer = () => {
                 sx={{
                     display: 'grid',
                     gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
-                    mb: 4
+                    mb: 4,
+                    gap: 5,
+                    mx: 'auto',
+                    alignItems: 'center',
                 }}
             >
-                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, width: '250px' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2, width: '250px', mx: 'auto' }}>
                     <Image
                         src='/logo/logo-gorizontal.svg'
                         width={250}
@@ -54,7 +57,7 @@ const Footer = () => {
                         <PhoneCall />
                     </Box>
                 </Box>
-                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, alignItems: 'center', }}>
                     <Typography variant='h5'>
                         Информация
                     </Typography>
@@ -63,19 +66,19 @@ const Footer = () => {
                     <Text href='#about_anchor'>Персональные данные</Text>
                     <Text href='#about_anchor'>Публичная оферта</Text>
                 </Box>
-                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                <Box sx={{ display: ['none', 'none', 'flex'], flexDirection: 'column', alignItems: 'center', gap: 2 }}>
                     <Typography variant='h5'>
-                        Услуги
+                        Группы
                     </Typography>
                     <Text href='#services_anchor'>Знакомство/звонок</Text>
                     <Text href='#services_anchor'>Разовая консультация</Text>
                     <Text href='#services_anchor'>Индивидуальное сопровождение</Text>
                 </Box>
-            </Container>
+            </Container >
             <Typography variant='body2' textAlign='center'>
                 ©Любое использование либо копирование материалов или подборки материалов сайта, элементов дизайна и оформления допускается лишь с разрешения правообладателя и только со ссылкой на источник: www.plastilin-deti.ru
             </Typography>
-        </Box>
+        </Box >
     )
 }
 

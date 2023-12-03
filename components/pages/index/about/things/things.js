@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { what } from '../../../../../data'
 import { useMediaQuery } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
+import HelperText from '@/components/UI/text/helperText'
 
 const Things = () => {
   const theme = useTheme()
@@ -11,9 +12,12 @@ const Things = () => {
 
   return (
     <Box>
-      <Typography variant={isLargeScreen ? "h3":'h4'} textAlign="center" data-aos='fade-up'>
+      <Typography variant="h3" textAlign="center" data-aos='fade-up'>
         Пластилин <b>это</b>
       </Typography>
+      <HelperText>
+        Нажмите для подробной информации
+      </HelperText>
       {isLargeScreen ?
         <Box
           sx={{
@@ -39,14 +43,14 @@ const Things = () => {
                 py: 3,
                 cursor: 'pointer',
                 position: 'relative',
-                transition: 'all .5s ease',
+                transition: 'all .2s ease',
                 overflow: 'hidden',
-                // '&:hover': {
-                //   '& .text12': {
-                //     background: 'rgba(239, 218, 168, .9)',
-                //     opacity: 1
-                //   }
-                // },
+                '&:hover': {
+                  '& .text12': {
+                    background: 'rgba(239, 218, 168, .9)',
+                    opacity: 1
+                  }
+                },
               }}
             >
               <Box
@@ -54,12 +58,15 @@ const Things = () => {
                   position: 'absolute',
                   left: 0,
                   top: 0,
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
                   width: '100%',
                   height: '100%',
                   opacity: 0,
                   transition: 'all .3s ease',
                 }}
-                className='center text12'
+                className='text12'
               >
                 <Typography variant='h5' sx={{ textDecoration: 'underline' }}>
                   Подробнее

@@ -1,5 +1,5 @@
 'use client'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
+import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles'
 import Header from '@/components/header/header'
 import Footer from '@/components/footer'
 import AOS from "aos"
@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react'
 import Falling from '@/components/UI/background/falling'
 import Loader from '@/components/UI/loader/loader'
 
-const theme = createTheme({
+let theme = createTheme({
     typography: {
         fontFamily: [
             'Nunito',
@@ -41,6 +41,8 @@ const theme = createTheme({
         }
     },
 })
+
+theme = responsiveFontSizes(theme)
 
 export default function Template({ children, main }) {
     const [loading, setLoading] = useState(true)
