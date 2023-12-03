@@ -58,16 +58,15 @@ const Footer = () => {
                     </Box>
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, alignItems: 'center', }}>
-                    <Typography variant='h5'>
+                    <Typography variant='h5' fontWeight='bold'>
                         Информация
                     </Typography>
-                    <Text href='#about_anchor'>О нас</Text>
                     <Text href='/agreement'>Пользовательское соглашение</Text>
-                    <Text href='#about_anchor'>Персональные данные</Text>
+                    <Text href='/privacy'>Персональные данные</Text>
                     <Text href='#about_anchor'>Публичная оферта</Text>
                 </Box>
                 <Box sx={{ display: ['none', 'none', 'flex'], flexDirection: 'column', alignItems: 'center', gap: 2 }}>
-                    <Typography variant='h5'>
+                    <Typography variant='h5' fontWeight='bold'> 
                         Группы
                     </Typography>
                     <Text href='#services_anchor'>Знакомство/звонок</Text>
@@ -75,7 +74,7 @@ const Footer = () => {
                     <Text href='#services_anchor'>Индивидуальное сопровождение</Text>
                 </Box>
             </Container >
-            <Typography variant='body2' textAlign='center'>
+            <Typography variant='body2' textAlign='center' sx={{ px: 1, }}>
                 ©Любое использование либо копирование материалов или подборки материалов сайта, элементов дизайна и оформления допускается лишь с разрешения правообладателя и только со ссылкой на источник: www.plastilin-deti.ru
             </Typography>
         </Box >

@@ -29,7 +29,7 @@ export default function NotFound() {
                     transform: 'rotate(180deg)'
                 }}
             />
-            <Typography variant='h5' sx={{ my: 2 }}>
+            <Typography variant='h5' sx={{ my: 2 }} textAlign='center'>
                 Похоже такой страницы не существует
             </Typography>
             <Link href='/'>

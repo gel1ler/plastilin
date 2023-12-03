@@ -61,11 +61,11 @@ const Menu = ({ close, main }) => {
                     link.href[0] === '/' ?
                         <Link href={link.href} key={link.name}>
                             <Typography
-                                variant='h4'
                                 sx={{
                                     color: 'black',
-                                    textDecoration: null
+                                    textDecoration: null,
                                 }}
+                                fontSize={30}
                             >
                                 {link.name}
                             </Typography>
@@ -73,7 +73,7 @@ const Menu = ({ close, main }) => {
                         :
                         <AnchorLink offset='100' href={link.href} key={link.name} style={{ textDecoration: 'none' }}>
                             <Typography
-                                variant='h4'
+                                fontSize={30}
                                 sx={{
                                     color: 'black',
                                     textDecoration: null
