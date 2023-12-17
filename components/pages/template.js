@@ -44,7 +44,7 @@ let theme = createTheme({
 
 theme = responsiveFontSizes(theme)
 
-export default function Template({ children, main }) {
+export default function Template({ children, main, noBg }) {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
@@ -61,7 +61,7 @@ export default function Template({ children, main }) {
             {loading ?
                 null :
                 <>
-                    <Falling />
+                    {!noBg ? <Falling /> : null}
                     <Header main={main} />
                     <main>
                         {children}

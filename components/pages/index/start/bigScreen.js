@@ -112,20 +112,36 @@ const BigScreen = () => {
                             5 возрастных групп от <b>1.2 года</b>
                         </Typography>
                     </Box>
-                    <Link href='/groups'>
-                        <Button
-                            variant='contained'
-                            sx={{
-                                px: 5,
-                                py: 1,
-                                mb: 2,
-                                width: 'max-content',
-                                borderRadius: '15px'
-                            }}
-                        >
-                            Подробнее
-                        </Button>
-                    </Link>
+                    <Box sx={{ display: 'flex', gap: 2 }}>
+                        <Link href='/groups'>
+                            <Button
+                                variant='contained'
+                                sx={{
+                                    px: 5,
+                                    py: 1,
+                                    mb: 2,
+                                    width: 'max-content',
+                                    borderRadius: '15px'
+                                }}
+                            >
+                                Подробнее
+                            </Button>
+                        </Link>
+                        <Link href='/schedule'>
+                            <Button
+                                variant='outlined'
+                                sx={{
+                                    px: 5,
+                                    py: 1,
+                                    mb: 2,
+                                    width: 'max-content',
+                                    borderRadius: '15px'
+                                }}
+                            >
+                                Расписание
+                            </Button>
+                        </Link>
+                    </Box>
                 </Box>
             </Box>
         </Box>

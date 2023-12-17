@@ -1,0 +1,35 @@
+.MuiInputBase-input {
+    position: relative;
+    font-size: 1rem;
+    box-sizing: border-box;
+    align-items: center;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.1876em;
+    letter-spacing: 0.00938em;
+    padding: 14px 4px;
+    border-radius: 8px;
+    color: rgba(0, 0, 0, 0.87);
+    cursor: text;
+    display: inline-flex;
+    justify-content: flex-start;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    transition: border-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.MuiInputBase-input:focus {
+    border-color: #59B376;
+    outline: none;
+}
+
+.MuiInputBase-input:disabled {
+    color: rgba(0, 0, 0, 0.38);
+    cursor: not-allowed;
+    background-color: rgba(0, 0, 0, 0.09);
+}
+
+.MuiInputBase-input:hover:not(.Mui-disabled):before {
+    border-bottom: 2px solid #59B376;
+}
