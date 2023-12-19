@@ -16,12 +16,27 @@ initializeApp(firebaseConfig)
 
 const db = getDatabase()
 
+function compare(a, b) {
+    if (a.timeFrom.slice(0, 2) < b.timeFrom.slice(0, 2)) {
+        return -1;
+    }
+    if (a.timeFrom.slice(0, 2) > b.timeFrom.slice(0, 2)) {
+        return 1;
+    }
+    return 0;
+}
+
 export async function getLessons() {
     const dbRef = ref(db)
     const snapshot = await get(child(dbRef, "lessons"))
 
     if (snapshot.exists()) {
         const lessons = snapshot.val()
+
+        lessons.forEach(day => {
+            day.sort(compare)
+        })
+
         return lessons
     } else {
         return []

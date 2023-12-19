@@ -65,33 +65,36 @@ const SmallScreen = () => {
                     5 возрастных групп от <b>1.2 года</b>
                 </Typography>
             </Box>
-            <Link href='/groups'>
-                <Button
-                    variant='contained'
-                    sx={{
-                        px: 5,
-                        py: 1,
-                        mb: 2,
-                        width: 'max-content',
-                        borderRadius: '15px'
-                    }}
-                >
-                    Подробнее
-                </Button>
-            </Link>
-            {/* <AnchorLink href='#form' offset={100}>
-                <Button
-                    variant='contained'
-                    sx={{
-                        p: 2,
-                        mb: 2,
-                        width: '100%',
-                        borderRadius: '15px'
-                    }}
-                >
-                    Записаться на пробное посещение
-                </Button>
-            </AnchorLink> */}
+            <Box sx={{ display: 'flex', gap: 2 }}>
+                <Link href='/groups'>
+                    <Button
+                        variant='contained'
+                        sx={{
+                            px: 4,
+                            py: 1,
+                            mb: 2,
+                            width: 'max-content',
+                            borderRadius: '15px'
+                        }}
+                    >
+                        Подробнее
+                    </Button>
+                </Link>
+                <Link href='/schedule'>
+                    <Button
+                        variant='outlined'
+                        sx={{
+                            px: 4,
+                            py: 1,
+                            mb: 2,
+                            width: 'max-content',
+                            borderRadius: '15px'
+                        }}
+                    >
+                        Расписание
+                    </Button>
+                </Link>
+            </Box>
         </Box>
     )
 }

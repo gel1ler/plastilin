@@ -2,8 +2,12 @@ import { Box, Button, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import Info from './Info'
 
+const bgColors = ['#AECFDF', 'secondary.main', '#93748A', '#59B376', '#274C77']
+
 const Item = ({ props }) => {
     const [open, setOpen] = useState(false)
+
+
 
     return (
         <>
@@ -23,14 +27,15 @@ const Item = ({ props }) => {
                 <Box className='between'>
                     <Typography
                         sx={{
-                            bgcolor: 'secondary.main',
+                            bgcolor: bgColors[props.ageFrom.slice(0, 1) - 1],
+                            color: 'white',
                             width: 'fit-content',
                             py: '2px',
                             px: '4px',
                             borderRadius: '5px'
                         }}
                     >
-                        {props.ageTo ? props.ageFrom + '-' + props.ageTo + " лет" : 'От ' + props.ageFrom + " лет"}
+                        {props.ageTo ? props.ageFrom + '-' + props.ageTo + " лет" : 'От ' + props.ageFrom + (props.ageTo == 4 ? ' года' : " лет")}
                     </Typography>
                     <Typography>
                         {props.timeFrom + '-' + props.timeTo}
