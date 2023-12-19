@@ -15,7 +15,7 @@ const Item = ({ props }) => {
             <Box
                 bgcolor='white'
                 sx={{
-                    p: 1,
+                    p: 2,
                     boxShadow: '0 0px 5px 2px rgba(0, 0, 0, 0.1)',
                     borderRadius: '10px',
                     minWidth: '170px',
@@ -24,7 +24,7 @@ const Item = ({ props }) => {
                     gap: 1,
                 }}
             >
-                <Box className='between'>
+                <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
                     <Typography
                         sx={{
                             bgcolor: bgColors[props.ageFrom.slice(0, 1) - 1],
@@ -37,13 +37,14 @@ const Item = ({ props }) => {
                     >
                         {props.ageTo ? props.ageFrom + '-' + props.ageTo + " лет" : 'От ' + props.ageFrom + (props.ageTo == 4 ? ' года' : " лет")}
                     </Typography>
-                    <Typography>
+                    <Typography textAlign='center' variant='h6'>
+                        {props.name}
+                    </Typography>
+                    <Typography sx={{ ml: 'auto' }}>
                         {props.timeFrom + '-' + props.timeTo}
                     </Typography>
                 </Box>
-                <Typography textAlign='center' variant='h6'>
-                    {props.name}
-                </Typography>
+
                 <Button onClick={() => setOpen(true)} sx={{ mt: 'auto' }}>Подробнее</Button>
             </Box >
         </>

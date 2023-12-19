@@ -15,6 +15,8 @@ const Arrow = ({ left, right, f, active }) => {
                 cursor: active ? 'pointer' : null,
                 transform: left ? 'scale(-1, 1) translateY(-50%)' : 'translateY(-50%)',
                 transition: 'all .3s ease-out',
+                filter: 'drop-shadow(30px 10px 4px #4444dd)',
+                zIndex: 100,
                 opacity: active ? 1 : 0.4,
                 ':hover': {
                     right: active ? right ? 0 : null : null,
