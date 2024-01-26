@@ -1,5 +1,5 @@
 'use client'
-import { UserButton } from '@clerk/nextjs'
+// import { UserButton } from '@clerk/nextjs'
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import Schedule from './Schedule';
@@ -11,7 +11,7 @@ const Index = ({ lessons }) => {
 
             <Box>
                 <Box sx={{ p: 2, width: '100vw' }}>
-                    <UserButton afterSignOutUrl='/' />
+                    {/* <UserButton afterSignOutUrl='/' /> */}
                     <Typography textAlign='center' variant='h4' mt={10}>
                         <b>Расписание</b>
                     </Typography>

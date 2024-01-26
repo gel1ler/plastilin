@@ -1,5 +1,5 @@
 'use client'
-import { UserButton, useSession, useUser } from '@clerk/nextjs'
+// import { UserButton, useSession, useUser } from '@clerk/nextjs'
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import Schedule from './Schedule';
@@ -40,31 +40,31 @@ const Index = ({ lessons }) => {
         </Box>
     }
 
-    const { session } = useSession();
-    const userRole = checkUserRole(session);
+    // const { session } = useSession();
+    // const userRole = checkUserRole(session);
 
-    return (
-        <Template noBg>
-            {userRole === 'org:admin' ?
-                <Box>
-                    <Box sx={{ p: 2, width: '100vw' }}>
-                        <UserButton afterSignOutUrl='/' />
-                        <Typography textAlign='center' variant='h4' mt={10}>
-                            Настройка расписания
-                        </Typography>
-                        <Schedule lessons={lessons} />
-                    </Box>
-                </Box>
-                :
-                <Box sx={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 3 }}>
-                    <UserButton afterSignOutUrl='/' />
-                    <Typography textAlign='center'>
-                        Вы не имеете доступа к этой странице
-                    </Typography>
-                </Box>
-            }
-        </Template>
-    )
+    // return (
+    //     <Template noBg>
+    //         {userRole === 'org:admin' ?
+    //             <Box>
+    //                 <Box sx={{ p: 2, width: '100vw' }}>
+    //                     <UserButton afterSignOutUrl='/' />
+    //                     <Typography textAlign='center' variant='h4' mt={10}>
+    //                         Настройка расписания
+    //                     </Typography>
+    //                     <Schedule lessons={lessons} />
+    //                 </Box>
+    //             </Box>
+    //             :
+    //             <Box sx={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 3 }}>
+    //                 <UserButton afterSignOutUrl='/' />
+    //                 <Typography textAlign='center'>
+    //                     Вы не имеете доступа к этой странице
+    //                 </Typography>
+    //             </Box>
+    //         }
+    //     </Template>
+    // )
 }
 
 export default Index
