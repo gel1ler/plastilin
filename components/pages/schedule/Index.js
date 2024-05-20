@@ -1,22 +1,25 @@
 'use client'
-// import { UserButton } from '@clerk/nextjs'
 import { Box, Typography } from '@mui/material'
-import React from 'react'
-import Schedule from './Schedule';
+import React, { useEffect, useState } from 'react'
 import Template from '../template';
+import Script from 'next/script';
 
-const Index = ({ lessons }) => {
+const Index = () => {
+    useEffect(() => {
+        const initScript = () => {
+            if (typeof WdgMoyklass !== 'undefined') {
+                WdgMoyklass["01DaIw4XAQ3uUWnkbhkTFDJYtwMPBuCZ6BCx"].init();
+            }
+        };
+
+        initScript()
+    }, []);
+
     return (
         <Template noBg>
-
-            <Box>
-                <Box sx={{ p: 2, width: '100vw' }}>
-                    {/* <UserButton afterSignOutUrl='/' /> */}
-                    <Typography textAlign='center' variant='h4' mt={10}>
-                        <b>Расписание</b>
-                    </Typography>
-                    <Schedule lessons={lessons} />
-                </Box>
+            <Box sx={{ p: 2, width: ['100vw', '100vw', '90vw'], mt: 12 }}>
+                <div id="SiteWidgetMoyklass90671"></div>
+                <Script type="text/javascript" src="https://app.moyklass.com/api/site/widget/?id=01DaIw4XAQ3uUWnkbhkTFDJYtwMPBuCZ6BCx" strategy="beforeInteractive" />
             </Box>
         </Template>
     )

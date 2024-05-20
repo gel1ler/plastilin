@@ -112,7 +112,7 @@ const InfoSmall = () => {
                     </ListItemText>
                 </List>
             </Box>
-            <Box>
+            <Box id="main_groups">
                 <Typography variant="h4" textAlign='center' sx={{ mt: 4 }}>
                     Основные группы
                 </Typography>
@@ -296,7 +296,7 @@ const InfoSmall = () => {
                     </ListText>
                 </Box>
             </Box>
-            <Box>
+            <Box id="additional_groups">
                 <Typography variant="h4" textAlign='center' sx={{ mt: 4 }}>
                     Дополнительные группы
                 </Typography>
@@ -485,7 +485,7 @@ const InfoSmall = () => {
                     </ListText>
                 </Box>
             </Box>
-            <Box>
+            <Box id="other_groups">
                 <Typography variant="h4" textAlign='center' sx={{ mt: 4 }}>
                     А также
                 </Typography>
