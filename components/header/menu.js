@@ -12,6 +12,10 @@ const Menu = ({ close, main }) => {
                 name: 'Главная'
             },
             {
+                href: '/schedule',
+                name: 'Расписание'
+            },
+            {
                 href: '#about',
                 name: 'О нас'
             },
@@ -33,6 +37,10 @@ const Menu = ({ close, main }) => {
             {
                 href: '/',
                 name: 'Главная'
+            },
+            {
+                href: '/schedule',
+                name: 'Расписание'
             },
             {
                 href: '/groups',
@@ -59,17 +67,30 @@ const Menu = ({ close, main }) => {
             {navLinks.map((link) => {
                 return (
                     link.href[0] === '/' ?
-                        <Link href={link.href} key={link.name}>
-                            <Typography
-                                sx={{
-                                    color: 'black',
-                                    textDecoration: null,
-                                }}
-                                fontSize={30}
-                            >
-                                {link.name}
-                            </Typography>
-                        </Link>
+                        link.href == '/schedule' ?
+                            <a href={link.href} key={link.name}>
+                                <Typography
+                                    sx={{
+                                        color: 'black',
+                                        textDecoration: null,
+                                    }}
+                                    fontSize={30}
+                                >
+                                    {link.name}
+                                </Typography>
+                            </a>
+                            :
+                            <Link href={link.href} key={link.name}>
+                                <Typography
+                                    sx={{
+                                        color: 'black',
+                                        textDecoration: null,
+                                    }}
+                                    fontSize={30}
+                                >
+                                    {link.name}
+                                </Typography>
+                            </Link>
                         :
                         <AnchorLink offset='100' href={link.href} key={link.name} style={{ textDecoration: 'none' }}>
                             <Typography
@@ -84,7 +105,7 @@ const Menu = ({ close, main }) => {
                         </AnchorLink>
                 )
             })}
-        </Box>
+        </Box >
     )
 }
 

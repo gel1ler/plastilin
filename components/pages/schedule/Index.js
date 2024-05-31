@@ -3,17 +3,16 @@ import { Box, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import Template from '../template';
 import Script from 'next/script';
+import { usePathname } from 'next/navigation';
 
 const Index = () => {
-    useEffect(() => {
-        const initScript = () => {
-            if (typeof WdgMoyklass !== 'undefined') {
-                WdgMoyklass["01DaIw4XAQ3uUWnkbhkTFDJYtwMPBuCZ6BCx"].init();
-            }
-        };
+    const pathname = usePathname();
 
-        initScript()
-    }, []);
+    useEffect(() => {
+        if (typeof WdgMoyklass !== 'undefined') {
+            WdgMoyklass["01DaIw4XAQ3uUWnkbhkTFDJYtwMPBuCZ6BCx"].init();
+        }
+    }, [pathname]);
 
     return (
         <Template noBg>
