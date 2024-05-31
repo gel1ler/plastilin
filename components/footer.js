@@ -69,9 +69,9 @@ const Footer = () => {
                     <Typography variant='h5' fontWeight='bold'> 
                         Группы
                     </Typography>
-                    <Text href='#services_anchor'>Знакомство/звонок</Text>
-                    <Text href='#services_anchor'>Разовая консультация</Text>
-                    <Text href='#services_anchor'>Индивидуальное сопровождение</Text>
+                    <Text href='/groups#main_groups'>Основные группы</Text>
+                    <Text href='/groups#additional_groups'>Дополнительные группы</Text>
+                    <Text href='/groups#other_groups'>Другое</Text>
                 </Box>
             </Container >
             <Typography variant='body2' textAlign='center' sx={{ px: 1, }}>
