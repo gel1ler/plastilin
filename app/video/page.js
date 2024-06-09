@@ -10,7 +10,7 @@ export const metadata = {
 export default function Page() {
   return (
     <Template noBg>
-      <Box sx={{ p: 2, width: ['100vw', '100vw', '90vw'], mt: 12 }}>
+      <Box sx={{ p: 2, width: ['100vw', '100vw', '90vw'], mt: 12, flexGrow: 1, display: 'flex' }}>
         <Index />
       </Box>
     </Template>

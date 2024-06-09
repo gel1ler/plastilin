@@ -8,7 +8,7 @@ import {
     usePhoneInput,
 } from 'react-international-phone';
 
-export const MuiPhone = ({value,onChange,...restProps}) => {
+export const MuiPhone = ({ value, onChange, sendPhoneToVerification, sx, ...restProps }) => {
 
     const { inputValue, handlePhoneValueChange, inputRef } =
         usePhoneInput({
@@ -17,12 +17,15 @@ export const MuiPhone = ({value,onChange,...restProps}) => {
             countries: defaultCountries,
             onChange: (data) => {
                 onChange(data.phone === '+8' ? '+7' : data.phone)
+                if (data.phone.length === 12) {
+                    sendPhoneToVerification(data.phone)
+                }
             },
         });
 
     return (
         <TextField
-            sx={{ color: 'white' }}
+            sx={sx}
             variant="outlined"
             color="primary"
             placeholder='+7 (XXX) XXX-XX-XX'
@@ -32,8 +35,7 @@ export const MuiPhone = ({value,onChange,...restProps}) => {
             error={!inputValue}
             required
             inputRef={inputRef}
-            inputProps={{ style: { color: "#fff" } }}
-            {...restProps}
+
         />
     );
 };
