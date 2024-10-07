@@ -18,7 +18,7 @@ const Loader = ({ loading }) => {
                 background: 'white',
                 transition: 'opacity .5s ease-out',
                 opacity: loading ? 1 : 0,
-                visibility: loading ? 'visible' : 'hidden'
+                pointerEvents: 'none'
             }}
         >
             <Box sx={{ width: '80vw', height: '100vh', maxWidth: '300px' }} className='centered'>

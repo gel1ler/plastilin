@@ -27,7 +27,7 @@ const Teacher = ({ i }) => {
                 borderRadius: '20px',
                 height: 'auto',
                 overflow: 'hidden',
-                p: 2,
+                p: 3,
                 maxWidth: '300px',
                 width: ['80%', '100%', '80%',],
                 transition: 'all .5s ease',
@@ -63,18 +63,17 @@ const Teacher = ({ i }) => {
             <Image
                 alt='Преподаватель детского центра Пластилин'
                 src={i.photo ? i.photo : stock}
-                height={200}
-                width={200}
+                height={250}
+                width={250}
                 style={{
                     objectFit: 'cover',
-                    width: '80%',
-                    height: '80%',
                     borderRadius: '100%',
+                    aspectRatio: '1/1'
                 }}
             />
             <Box>
                 <Typography variant='h5' textAlign='center' sx={{ mt: 1, fontSize: [25, 25, 30] }}>
-                    {i.name.split(' ')[1]}
+                    {i.name }
                 </Typography>
             </Box>
         </Box >

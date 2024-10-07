@@ -1,6 +1,6 @@
 'use client'
-import { Box, Typography } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import { Box } from '@mui/material'
+import React, { useEffect } from 'react'
 import Template from '../template';
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';

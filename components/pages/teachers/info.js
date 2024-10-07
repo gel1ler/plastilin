@@ -23,30 +23,34 @@ const Info = ({ open, onClose, i }) => {
                     overflowX: 'hidden'
                 }}
             >
-                <Typography variant='h5' textAlign='center'>
+                <Typography variant='h4' textAlign='center'>
                     {i.name}
                 </Typography>
                 <Image
                     alt='Преподаватель детского центра Пластилин'
                     src={i.photo ? i.photo : stock}
                     width={270}
+                    height={270}
                     style={{
+                        objectFit: 'cover',
                         borderRadius: '100%',
                         margin: '0 auto'
                     }}
                 />
+                <Typography textAlign='center' sx={{ fontStyle: 'italic', fontFamily: 'Intro-Bold' }}>
+                    {i.quote}
+                </Typography>
                 <Typography>
                     <b>Направление:</b> {i.direction}
                 </Typography>
                 <Typography>
                     <b>Опыт:</b> {i.experience}
                 </Typography>
-                <Typography>
-                    <b>О себе:</b> {i.description}
-                </Typography>
-                <Typography>
-                    <b>Цитата:</b> {i.quote}
-                </Typography>
+                {i.description ?
+                    <Typography>
+                        <b>О себе:</b> {i.description}
+                    </Typography>
+                    : null}
             </Box>
         </Dialog>
     )
