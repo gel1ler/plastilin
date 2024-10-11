@@ -1,6 +1,6 @@
-import { Box, Dialog, Typography, List, ListItemText, Tabs, Tab, Paper } from '@mui/material'
+import { Box, Typography, List, ListItemText, Tabs, Tab } from '@mui/material'
 import React, { useState } from 'react'
-
+import { data } from './index'
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -18,191 +18,53 @@ function TabPanel(props) {
                 </Box>
             )}
         </div>
-    )
+    );
 }
 
-const MyTabs = ({ value, handleChange }) => {
+const MyTabs = () => {
+    const [value, setValue] = useState(0);
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
     return (
         <Box>
             <Tabs value={value} onChange={handleChange}>
-                <Tab label="1️⃣ Ясли" />
-                <Tab label="2️⃣ Младшая" />
-                <Tab label="3️⃣ Средняя" />
-                <Tab label="4️⃣ Старшая" />
-                <Tab label="5️⃣ Подготовительная" />
+                {data.map((tab, index) => (
+                    <Tab key={index} label={tab.title} />
+                ))}
             </Tabs>
-            <TabPanel value={value} index={0}>
-                <Box>
-                    <Typography variant="h5">
-                        1️⃣ Ясли
-                    </Typography>
-                    <List disablePadding>
-                        <ListItemText>
-                            - Количество деток в группе - до 7 человек.
-                        </ListItemText>
-                        <ListItemText>
-                            - Количество воспитателей на группу - 2 + помощник
-                        </ListItemText>
-                    </List>
-                </Box>
-                <Box>
-                    <Typography variant="h6">
-                        Стоимость:
-                    </Typography>
-                    <List disablePadding>
-                        <ListItemText>
-                            * 5 раз в неделю: 21.500 р/месяц
-                        </ListItemText>
-                        <ListItemText>
-                            * разовое посещение: 1.700 р/день
-                        </ListItemText>
-                        <ListItemText>
-                            * группа входного дня: 1.700 р / день
-                        </ListItemText >
-                        <ListItemText >
-                            * первое пробное посещение - бесплатно
-                        </ListItemText >
-                    </List >
-                </Box>
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-                <Box>
-                    <Typography variant="h5">
-                        2️⃣ Младшая группа
-                    </Typography>
-                    <List disablePadding>
-                        <ListItemText>
-                            - Количество деток в группе - до 7 человек.
-                        </ListItemText>
-                        <ListItemText>
-                            - Количество воспитателей на группу - 2 + помощник
-                        </ListItemText>
-                    </List>
-                </Box>
-                <Box>
-                    <Typography variant="h6">
-                        Стоимость:
-                    </Typography>
-                    <List disablePadding>
-                        <ListItemText>
-                            * 5 раз в неделю: 21.500 р/месяц
-                        </ListItemText>
-                        <ListItemText>
-                            * разовое посещение: 1.700 р/день
-                        </ListItemText>
-                        <ListItemText>
-                            * группа входного дня: 1.700 р / день
-                        </ListItemText >
-                        <ListItemText >
-                            * первое пробное посещение - бесплатно
-                        </ListItemText >
-                    </List >
-                </Box>
-            </TabPanel>
-            <TabPanel value={value} index={2}>
-                <Box>
-                    <Typography variant="h5">
-                        3️⃣ Средняя группа
-                    </Typography>
-                    <List disablePadding>
-                        <ListItemText>
-                            - Количество деток в группе - до 12 человек.
-                        </ListItemText>
-                        <ListItemText>
-                            - Количество воспитателей на группу - 1 + помощник
-                        </ListItemText>
-                    </List>
-                </Box>
-                <Box>
-                    <Typography variant="h6">
-                        Стоимость:
-                    </Typography>
-                    <List disablePadding>
-                        <ListItemText>
-                            * 5 раз в неделю: 19.500 р / месяц
-                        </ListItemText>
-                        <ListItemText>
-                            * разовое посещение: 1.500 р / день
-                        </ListItemText>
-                        <ListItemText>
-                            * группа входного дня: 1.500 р / день
-                        </ListItemText >
-                        <ListItemText >
-                            * первое пробное посещение - бесплатно
-                        </ListItemText >
-                    </List >
-                </Box>
-            </TabPanel>
-            <TabPanel value={value} index={3}>
-                <Box>
-                    <Typography variant="h5">
-                        4️⃣ Старшая группа
-                    </Typography>
-                    <List disablePadding>
-                        <ListItemText>
-                            - Количество деток в группе - до 12 человек.
-                        </ListItemText>
-                        <ListItemText>
-                            - Количество воспитателей на группу - 1 + помощник
-                        </ListItemText>
-                    </List>
-                </Box>
-                <Box>
-                    <Typography variant="h6">
-                        Стоимость:
-                    </Typography>
-                    <List disablePadding>
-                        <ListItemText>
-                            * 5 раз в неделю: 19.500 р / месяц
-                        </ListItemText>
-                        <ListItemText>
-                            * разовое посещение: 1.500 р / день
-                        </ListItemText>
-                        <ListItemText>
-                            * группа входного дня: 1.500 р / день
-                        </ListItemText >
-                        <ListItemText >
-                            * первое пробное посещение - бесплатно
-                        </ListItemText >
-                    </List >
-                </Box>
-            </TabPanel>
-            <TabPanel value={value} index={4}>
-                <Box>
-                    <Typography variant="h5">
-                        5️⃣ Подготовительная группа.
-                    </Typography>
-                    <List disablePadding>
-                        <ListItemText>
-                            - Количество деток в группе - до 12 человек.
-                        </ListItemText>
-                        <ListItemText>
-                            - Количество воспитателей на группу - 1 + помощник
-                        </ListItemText>
-                    </List>
-                </Box>
-                <Box>
-                    <Typography variant="h6">
-                        Стоимость:
-                    </Typography>
-                    <List disablePadding>
-                        <ListItemText>
-                            * 5 раз в неделю: 19.500 р / месяц
-                        </ListItemText>
-                        <ListItemText>
-                            * разовое посещение: 1.500 р / день
-                        </ListItemText>
-                        <ListItemText>
-                            * группа входного дня: 1.500 р / день
-                        </ListItemText >
-                        <ListItemText >
-                            * первое пробное посещение - бесплатно
-                        </ListItemText >
-                    </List >
-                </Box>
-            </TabPanel>
+            {data.map((tab, index) => (
+                <TabPanel key={index} value={value} index={index}>
+                    <Box>
+                        <Typography variant="h5">
+                            {tab.title}
+                        </Typography>
+                        <List disablePadding>
+                            {tab.description.map((desc, i) => (
+                                <ListItemText key={i}>
+                                    - {desc}
+                                </ListItemText>
+                            ))}
+                        </List>
+                    </Box>
+                    <Box>
+                        <Typography variant="h6">
+                            Стоимость:
+                        </Typography>
+                        <List disablePadding>
+                            {tab.prices.map((price, i) => (
+                                <ListItemText key={i}>
+                                    * {price}
+                                </ListItemText>
+                            ))}
+                        </List>
+                    </Box>
+                </TabPanel>
+            ))}
         </Box>
-    )
-}
+    );
+};
 
-export default MyTabs
+export default MyTabs;

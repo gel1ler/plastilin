@@ -1,21 +1,43 @@
-import { Box, Dialog, Typography, List, ListItemText, Tabs, Tab } from '@mui/material'
+import { Box, Dialog, Typography, List, ListItemText, Tabs, Tab, Divider } from '@mui/material'
 import React, { useState } from 'react'
 import MyTabs from './myTabs'
 import MyTabs2 from './myTabs2'
 import Form from '@/components/UI/form'
+import Group from './group'
 
-const Info = () => {
-    const [value1, setValue1] = useState(0)
-    const [value2, setValue2] = useState(0)
+const ListText = ({ children, name }) => {
+    const [open, setOpen] = useState(false)
+    return (
+        <>
+            <Dialog open={open} onClose={() => setOpen(false)}>
+                <Box
+                    className='column-centered'
+                    sx={{
+                        p: 3,
+                        overflowY: 'scroll',
+                        maxHeight: '80vh',
+                        overflowX: 'hidden'
+                    }}
+                >
+                    {children}
+                </Box>
+            </Dialog>
+            <Typography
+                onClick={() => setOpen(true)}
+                variant='h6'
+                sx={{
+                    mt: 1,
+                    p: 1,
 
-    const handleChange1 = (event, newValue) => {
-        setValue1(newValue)
-    }
+                }}
+            >
+                {name}
+            </Typography>
+        </>
+    )
+}
 
-    const handleChange2 = (event, newValue) => {
-        setValue2(newValue)
-    }
-
+const Info = ({ data, additionalData }) => {
     return (
         <Box
             sx={{
@@ -23,12 +45,12 @@ const Info = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: 4,
-                maxWidth: '1200px',
+                maxWidth: '800px',
                 mt: '100px'
             }}
         >
-            <Typography variant='h3'>
-                Пять возрастных групп от <b>1 года и 2 месяцев</b>
+            <Typography variant='h3' textAlign='center'>
+                Четыре возрастные группы от <br /><b>1 года и 2 месяцев</b>
             </Typography>
             <Box sx={{ bgcolor: 'additional.main', p: 2, width: 'max-content', borderRadius: '20px' }}>
                 <Typography variant='h5'>
@@ -36,44 +58,18 @@ const Info = () => {
                 </Typography>
                 <List disablePadding>
                     <ListItemText>
-                        1. Утренняя группа: 9:00* - 13:00 <br /> *дежурная  группа ежедневно принимает детей с 7:00.
+                        1. Детский сад полного дня: 8:30 - 19:00
                     </ListItemText>
                     <ListItemText>
-                        2. Вечерняя группа: 16:00 - 20:00
+                        2. Утренняя группа: 8:30 - 12:30
+                    </ListItemText>
+                    <ListItemText>
+                        3. Вечерняя группа: 15:00 - 19:00
                     </ListItemText>
                 </List>
             </Box>
-            <Box sx={{ bgcolor: 'secondary.main', p: 2, width: '70%', borderRadius: '20px' }}>
-                <Typography variant='h5'>
-                    Распорядок дня:
-                </Typography>
-                <List disablePadding>
-                    <ListItemText>
-                        - Зарядка
-                    </ListItemText>
-                    <ListItemText>
-                        - Перекус (представляет детский центр)
-                    </ListItemText>
-                    <ListItemText>
-                        - Утренний/вечерний круг
-                    </ListItemText>
-                    <ListItemText>
-                        - Занятия со своим воспитателем (творческие и интеллектуальные занятия, подготовка к школе)
-                    </ListItemText>
-                    <ListItemText>
-                        - Свободная игра
-                    </ListItemText>
-                    <ListItemText>
-                        - Занятие с приходящим педагогом (английский язык, логопед, нейропсихолог, ораторское мастерство, театральный кружок, курсы этикета и пр)
-                    </ListItemText>
-                    <ListItemText>
-                        - Перекус (представляет детский центр)
-                    </ListItemText>
-                    <ListItemText>
-                        - Свободная игра
-                    </ListItemText>
-                </List>
-            </Box>
+
+            {/* Основные группы */}
             <Box>
                 <Typography variant="h4" textAlign='center'>
                     Основные группы
@@ -81,9 +77,84 @@ const Info = () => {
                 <Typography variant="body2" textAlign='center'>
                     Выберите интересующую вас группу
                 </Typography>
-                <MyTabs value={value1} handleChange={handleChange1} />
+                <Box
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        gap: 2,
+                        mt: 4
+                    }}
+                >
+                    {data.map((group, index) => (
+                        <Group key={index} props={group} />
+                    ))}
+                </Box>
             </Box>
             <Box>
+                {additionalData.map((group, index) => (
+                    <React.Fragment key={index}>
+                        <ListText name={group.title}>
+                            <Box>
+                                <Typography variant="h5">
+                                    {group.title}
+                                </Typography>
+                                <List disablePadding>
+                                    {group.description.map((desc, i) => (
+                                        <ListItemText key={i}>
+                                            {desc}
+                                        </ListItemText>
+                                    ))}
+                                </List>
+                            </Box>
+                            {group.prices && (
+                                <Box>
+                                    <Typography variant="h6">
+                                        Стоимость:
+                                    </Typography>
+                                    <List disablePadding>
+                                        {group.prices.map((price, i) => (
+                                            <ListItemText key={i}>
+                                                {price}
+                                            </ListItemText>
+                                        ))}
+                                    </List>
+                                </Box>
+                            )}
+                            {group.schedule && (
+                                <Box>
+                                    <Typography variant="h6">
+                                        Распорядок дня:
+                                    </Typography>
+                                    <List disablePadding>
+                                        {group.schedule.map((item, i) => (
+                                            <ListItemText key={i}>
+                                                {item}
+                                            </ListItemText>
+                                        ))}
+                                    </List>
+                                </Box>
+                            )}
+                            {group.programs && (
+                                <Box>
+                                    <Typography variant="h6">
+                                        Программы:
+                                    </Typography>
+                                    <List disablePadding>
+                                        {group.programs.map((program, i) => (
+                                            <ListItemText key={i}>
+                                                {program}
+                                            </ListItemText>
+                                        ))}
+                                    </List>
+                                </Box>
+                            )}
+                        </ListText>
+                        <Divider />
+                    </React.Fragment>
+                ))}
+            </Box>
+            {/* <Box>
                 <Typography variant="h4" textAlign='center'>
                     Дополнительные группы
                 </Typography>
@@ -91,29 +162,7 @@ const Info = () => {
                     Выберите интересующую вас группу
                 </Typography>
                 <MyTabs2 value={value2} handleChange={handleChange2} />
-            </Box>
-            <Box>
-                <Typography variant="h4" textAlign='center'>
-                    А также
-                </Typography>
-                <List>
-                    <ListItemText>
-                        🟢 Группа «Мама и малыш»
-                    </ListItemText>
-                    <ListItemText>
-                        🟢 Семинары для родителей
-                    </ListItemText>
-                    <ListItemText>
-                        🟢 Работа с детским и семейным психологом
-                    </ListItemText>
-                    <ListItemText>
-                        🟢 Conversation для развития языка
-                    </ListItemText>
-                    <ListItemText>
-                        🟢 Клуб будущих мам
-                    </ListItemText>
-                </List>
-            </Box>
+            </Box> */}
             <Form center m />
         </Box>
     )
