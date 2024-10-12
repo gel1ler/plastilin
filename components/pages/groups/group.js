@@ -4,7 +4,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
 const Group = ({ props }) => {
-    const { title, description, prices } = props;
+    const { title, description, prices, age, yearWord } = props;
     const [expanded, setExpanded] = useState(false);
 
     const handleExpandClick = () => {
@@ -21,6 +21,7 @@ const Group = ({ props }) => {
                 backgroundColor: 'white',
                 cursor: 'pointer',
                 transition: 'background-color 0.3s ease',
+                maxWidth: '90vw',
                 position: 'relative',
                 '&:hover': {
                     backgroundColor: '#f5f5f5',
@@ -29,46 +30,32 @@ const Group = ({ props }) => {
             onClick={handleExpandClick}
             className='shadow'
         >
-
-
-            {/* Absolutes */}
-            {/* <Box
-                sx={{
-                    position: 'absolute',
-                    width: '100%',
-                    height: '40%',
-                    bottom: 0,
-                    transition: 'height 0.3s ease',
-                    overflow: 'hidden',
-                    background: 'linear-gradient(to top, #fff 20%, rgba(255,255,255,0.8), transparent)',
-                    zIndex: 100
-                }}
-            /> */}
-
             <Box
                 sx={{
                     display: 'flex',
+                    flexDirection: ['column', 'column', 'row'],
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    gap: 5,
+                    gap: [2, 2, 5],
                 }}
-            >
-                <Typography variant='h5'>{title}</Typography>
+            ><Typography variant='h5' sx={{ textAlign: ['center', 'center', 'left'] }}>
+                    {title} ({age}{yearWord ? ` ${yearWord}` : ''})
+                </Typography>
                 <Box
                     sx={{
                         display: 'flex',
                         alignItems: 'center',
-                        gap: 2,
+                        gap: 1,
                     }}
                 >
                     <Box
                         sx={{
                             display: 'flex',
-                            gap: [0, 2],
-                            flexDirection: ['column', 'row'],
+                            gap: 2,
+                            flexDirection: 'row',
                         }}
                     >
-                        < Button >
+                        <Button>
                             Подробнее
                         </Button>
                         <Button variant='contained'>
@@ -79,6 +66,7 @@ const Group = ({ props }) => {
                         onClick={handleExpandClick}
                         aria-expanded={expanded}
                         aria-label="show more"
+                        sx={{ display: ['none', 'block'] }}
                     >
                         <ExpandMoreIcon
                             sx={{
@@ -98,7 +86,10 @@ const Group = ({ props }) => {
                 in={expanded}
                 timeout="auto"
             >
-                <Box sx={{ ml: 2 }}>
+                <Box sx={{ ml: [0, 2] }}>
+                    <Typography variant='h6'>
+                        Описание:
+                    </Typography>
                     <List disablePadding>
                         {description.map((desc, i) => (
                             <ListItemText key={i}>

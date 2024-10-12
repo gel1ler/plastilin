@@ -1,7 +1,6 @@
-import { Box, Dialog, Typography, List, ListItemText, Tabs, Tab, Divider } from '@mui/material'
+'use client'
+import { Box, Dialog, Typography, List, ListItemText, Divider } from '@mui/material'
 import React, { useState } from 'react'
-import MyTabs from './myTabs'
-import MyTabs2 from './myTabs2'
 import Form from '@/components/UI/form'
 import Group from './group'
 
@@ -28,7 +27,7 @@ const ListText = ({ children, name }) => {
                 sx={{
                     mt: 1,
                     p: 1,
-
+                    textAlign: ['center', 'center', 'left']
                 }}
             >
                 {name}
@@ -52,22 +51,6 @@ const Info = ({ data, additionalData }) => {
             <Typography variant='h3' textAlign='center'>
                 Четыре возрастные группы от <br /><b>1 года и 2 месяцев</b>
             </Typography>
-            <Box sx={{ bgcolor: 'additional.main', p: 2, width: 'max-content', borderRadius: '20px' }}>
-                <Typography variant='h5'>
-                    Продолжительность:
-                </Typography>
-                <List disablePadding>
-                    <ListItemText>
-                        1. Детский сад полного дня: 8:30 - 19:00
-                    </ListItemText>
-                    <ListItemText>
-                        2. Утренняя группа: 8:30 - 12:30
-                    </ListItemText>
-                    <ListItemText>
-                        3. Вечерняя группа: 15:00 - 19:00
-                    </ListItemText>
-                </List>
-            </Box>
 
             {/* Основные группы */}
             <Box>
@@ -91,13 +74,26 @@ const Info = ({ data, additionalData }) => {
                     ))}
                 </Box>
             </Box>
-            <Box>
+
+            {/* Дополнительные группы */}
+            <Box mt={10}>
+                <Typography variant="h4" textAlign='center'>
+                    Дополнительные группы
+                </Typography>
+                <Typography variant="body2" textAlign='center'>
+                    Выберите интересующую вас группу
+                </Typography>
                 {additionalData.map((group, index) => (
-                    <React.Fragment key={index}>
+                    <Box key={index} sx={{
+                        cursor: 'pointer',
+                    }}>
                         <ListText name={group.title}>
                             <Box>
-                                <Typography variant="h5">
+                                <Typography variant="h5" sx={{ textAlign: ['center', 'center', 'left'] }}>
                                     {group.title}
+                                </Typography>
+                                <Typography variant='h6'>
+                                    Описание:
                                 </Typography>
                                 <List disablePadding>
                                     {group.description.map((desc, i) => (
@@ -150,19 +146,10 @@ const Info = ({ data, additionalData }) => {
                                 </Box>
                             )}
                         </ListText>
-                        <Divider />
-                    </React.Fragment>
+                        <Divider sx={{ opacity: 0.5 }} />
+                    </Box>
                 ))}
             </Box>
-            {/* <Box>
-                <Typography variant="h4" textAlign='center'>
-                    Дополнительные группы
-                </Typography>
-                <Typography variant="body2" textAlign='center'>
-                    Выберите интересующую вас группу
-                </Typography>
-                <MyTabs2 value={value2} handleChange={handleChange2} />
-            </Box> */}
             <Form center m />
         </Box>
     )

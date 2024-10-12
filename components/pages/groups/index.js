@@ -1,18 +1,18 @@
-'use client'
 import Info from '@/components/pages/groups/info'
-import InfoSmall from '@/components/pages/groups/info-small'
-import { useMediaQuery, useTheme } from '@mui/material'
 import Template from '../template'
-import { Description } from '@mui/icons-material'
 
 export const data = [
     {
         title: '1️⃣ Ясли',
+        age: '1,2 - 2,5',
+        yearWord: 'года',
         description: ['Количество деток в группе - до 7 человек.', 'Количество воспитателей на группу - 2 + помощник'],
         prices: ['5 раз в неделю: 21.500 р/месяц', 'разовое посещение: 1.700 р/день', 'группа входного дня: 1.700 р / день', 'первое пробное посещение - бесплатно']
     },
     {
         title: '2️⃣ Младшая группа',
+        age: '2,5 - 4',
+        yearWord: 'года',
         description: ['Количество деток в группе - до 7 человек.', 'Количество воспитателей на группу - 2 + помощник'],
         prices: ['5 раз в неделю: 21.500 р/месяц', 'разовое посещение: 1.700 р/день', 'группа входного дня: 1.700 р / день', 'первое пробное посещение - бесплатно']
     },
@@ -23,11 +23,14 @@ export const data = [
     // },
     {
         title: '3️⃣ Старшая группа',
+        age: '4 - 6',
+        yearWord: 'лет',
         description: ['Количество деток в группе - до 12 человек.', 'Количество воспитателей на группу - 1 + помощник'],
         prices: ['5 раз в неделю: 19.500 р / месяц', 'разовое посещение: 1.500 р / день', 'группа входного дня: 1.500 р / день', 'первое пробное посещение - бесплатно']
     },
     {
         title: '4️⃣ Подготовительная группа',
+        age: '6+',
         // title: '5️⃣ Подготовительная группа',
         description: ['Количество деток в группе - до 12 человек.', 'Количество воспитателей на группу - 1 + помощник'],
         prices: ['5 раз в неделю: 19.500 р / месяц', 'разовое посещение: 1.500 р / день', 'группа входного дня: 1.500 р / день', 'первое пробное посещение - бесплатно']
@@ -107,9 +110,6 @@ export const additionalData = [
 ];
 
 export default function Index() {
-    const theme = useTheme()
-    const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'))
-
     return (
         <Template>
             <Info
