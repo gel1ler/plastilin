@@ -1,12 +1,14 @@
 import Index from '@/components/pages/schedule/Index'
-import { getLessons } from '@/firebase/clientApp'
 import React from 'react'
 
-const Page = async () => {
-    const lessons = await getLessons()
+export const metadata = {
+    title: 'Пластилин - расписание',
+    description: 'Расписание занятий детского центра Пластилин.',
+  }
 
+const Page = async () => {
     return (
-        <Index lessons={lessons} />
+        <Index />
     )
 }
 

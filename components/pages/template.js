@@ -58,17 +58,12 @@ export default function Template({ children, main, noBg }) {
     return (
         <ThemeProvider theme={theme}>
             <Loader loading={loading} />
-            {loading ?
-                null :
-                <>
-                    {!noBg ? <Falling /> : null}
-                    <Header main={main} />
-                    <main>
-                        {children}
-                    </main>
-                    <Footer />
-                </>
-            }
+            {!noBg ? <Falling /> : null}
+            <Header main={main} />
+            <main>
+                {children}
+            </main>
+            <Footer />
         </ThemeProvider>
     )
 }

@@ -80,7 +80,7 @@ const SmallScreen = () => {
                         Подробнее
                     </Button>
                 </Link>
-                <Link href='/schedule'>
+                <a href='/schedule'>
                     <Button
                         variant='outlined'
                         sx={{
@@ -93,7 +93,7 @@ const SmallScreen = () => {
                     >
                         Расписание
                     </Button>
-                </Link>
+                </a>
             </Box>
         </Box>
     )

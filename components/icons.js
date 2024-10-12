@@ -61,7 +61,10 @@ export const PhoneCall = ({ icon, text }) => {
                     }}
                 >
                     <Link href='tel:+7(916)868-87-88' target='_blank'>
-                        <Typography variant='h6' sx={{ textDecoration: 'underline', display: 'flex', alignItems: 'center', gap: 1 }}>
+                        <Typography
+                            variant='h6'
+                            sx={{ textDecoration: 'underline', display: 'flex', alignItems: 'center', gap: 1 }}
+                        >
                             <Phone fontSize='large' />
                             Вызов на мобильный
                         </Typography>
@@ -82,7 +85,6 @@ export const PhoneCall = ({ icon, text }) => {
                     variant={text ? '' : 'h6'}
                     color='black'
                     sx={{
-                        fontWeight: 'bold',
                         textDecoration: 'underline',
                         cursor: 'pointer'
                     }}

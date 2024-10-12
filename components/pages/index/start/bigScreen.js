@@ -127,7 +127,7 @@ const BigScreen = () => {
                                 Подробнее
                             </Button>
                         </Link>
-                        <Link href='/schedule'>
+                        <a href='/schedule'>
                             <Button
                                 variant='outlined'
                                 sx={{
@@ -140,7 +140,7 @@ const BigScreen = () => {
                             >
                                 Расписание
                             </Button>
-                        </Link>
+                        </a>
                     </Box>
                 </Box>
             </Box>

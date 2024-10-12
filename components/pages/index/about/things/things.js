@@ -15,9 +15,6 @@ const Things = () => {
       <Typography variant="h3" textAlign="center" data-aos='fade-up'>
         Пластилин <b>это</b>
       </Typography>
-      <HelperText>
-        Нажмите для подробной информации
-      </HelperText>
       {isLargeScreen ?
         <Box
           sx={{
@@ -41,16 +38,17 @@ const Things = () => {
                 bgcolor: 'secondary.main',
                 borderRadius: '20px',
                 py: 3,
-                cursor: 'pointer',
+                //Раскомментировать если будет наполнение для блоков
+                // cursor: 'pointer',
                 position: 'relative',
                 transition: 'all .2s ease',
                 overflow: 'hidden',
-                '&:hover': {
-                  '& .text12': {
-                    background: 'rgba(239, 218, 168, .9)',
-                    opacity: 1
-                  }
-                },
+                // '&:hover': {
+                //   '& .text12': {
+                //     background: 'rgba(239, 218, 168, .9)',
+                //     opacity: 1
+                //   }
+                // },
               }}
             >
               <Box
