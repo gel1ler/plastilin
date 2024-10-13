@@ -5,10 +5,10 @@ import Item from './Item';
 import { getDatesOfCurrentWeek } from '@/services';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Image from 'next/image';
+import 'slick-carousel/slick/slick-theme.css'
+import Image from 'next/image'
 
-const days = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'];
+const days = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС']
 
 const Schedule = ({ lessons }) => {
     const week = getDatesOfCurrentWeek()
