@@ -49,7 +49,7 @@ const Schedule = ({ lessons }) => {
                 }}>
                     {days[i]}
                 </Typography>
-            );
+            )
         },
     };
 
