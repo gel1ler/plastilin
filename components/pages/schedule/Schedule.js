@@ -138,21 +138,33 @@ const Schedule = () => {
                                             bgcolor: 'white',
                                             width: '80%',
                                             display: 'grid',
-                                            gridTemplateColumns: '1fr',
+                                            gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr', '1fr 1fr 1fr'],
+                                            gridTemplateRows: ['auto', 'auto', 'auto', 'repeat(9, 1fr)', 'repeat(6, 1fr)'],
+                                            justifyItems: ['unset', 'unset', 'unset', 'center'],
+                                            gridAutoFlow: ['unset', 'unset', 'unset', 'column'],
                                             mx: 2,
                                             gap: '10px',
                                             p: 2,
+                                            pt:3,
                                             boxShadow: '0 0px 5px 2px rgba(0, 0, 0, 0.1)',
                                             borderRadius: '20px',
-                                            maxWidth: '800px',
+                                            maxWidth: '1000px',
                                             my: 1
                                         }}
                                     >
                                         {groups[validGroup].map((lesson, lessonIndex) => (
-                                            <React.Fragment key={lessonIndex}>
-                                                <Item props={lesson} index={key} />
-                                                {lessonIndex === groups[validGroup][key].length - 1 ? null : <Divider />}
-                                            </React.Fragment>
+                                            <Box key={lessonIndex} sx={{ width: '100%' }}>
+                                                <Item props={lesson} index={key} lessonIndex={lessonIndex} />
+                                                {lessonIndex === groups[validGroup].length - 1 ? null :
+                                                    <Divider
+                                                        sx={{
+                                                            my: 1,
+                                                            width: '100%',
+                                                            display: ['block', 'block', 'block', (lessonIndex + 1) % 9 === 0 ? 'none' : 'block', (lessonIndex + 1) % 6 === 0 ? 'none' : 'block'],
+                                                        }}
+                                                    />
+                                                }
+                                            </Box>
                                         ))}
                                     </Box>
                                 </Box>
