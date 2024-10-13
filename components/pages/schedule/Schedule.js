@@ -11,9 +11,9 @@ import Image from 'next/image';
 const days = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'];
 
 const Schedule = ({ lessons }) => {
-    const week = getDatesOfCurrentWeek();
-    const sliderRef = useRef(null);
-    const [activeSlide, setActiveSlide] = useState(0);
+    const week = getDatesOfCurrentWeek()
+    const sliderRef = useRef(null)
+    const [activeSlide, setActiveSlide] = useState(0)
 
     const settings = {
         dots: true,
