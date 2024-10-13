@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Container, Divider, Typography } from '@mui/material'
 import Image from 'next/image'
 import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from './icons'
 import Link from 'next/link'
@@ -66,7 +66,7 @@ const Footer = () => {
                     <Text href='#about_anchor'>Публичная оферта</Text>
                 </Box>
                 <Box sx={{ display: ['none', 'none', 'flex'], flexDirection: 'column', alignItems: 'center', gap: 2 }}>
-                    <Typography variant='h5' fontWeight='bold'> 
+                    <Typography variant='h5' fontWeight='bold'>
                         Группы
                     </Typography>
                     <Text href='/groups#main_groups'>Основные группы</Text>
@@ -74,6 +74,7 @@ const Footer = () => {
                     <Text href='/groups#other_groups'>Другое</Text>
                 </Box>
             </Container >
+            <hr style={{ width: '90%', opacity: 0.2 }} />
             <Typography variant='body2' textAlign='center' sx={{ px: 1, }}>
                 ©Любое использование либо копирование материалов или подборки материалов сайта, элементов дизайна и оформления допускается лишь с разрешения правообладателя и только со ссылкой на источник: www.plastilin-deti.ru
             </Typography>

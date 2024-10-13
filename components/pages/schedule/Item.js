@@ -1,6 +1,8 @@
+import { capitalizeFirstLetter } from '@/services'
 import { Box, Typography } from '@mui/material'
 
-const Item = ({ props }) => {
+const Item = ({ props, index }) => {
+    const { time, def, activities } = props
     return (
         <Box
             bgcolor='white'
@@ -8,24 +10,25 @@ const Item = ({ props }) => {
                 minWidth: '170px',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: 1,
+                gap: '8px',
             }}
         >
             <Typography
                 sx={{
                     bgcolor: 'secondary.main',
                     width: 'fit-content',
-                    py: '4px',
+                    py: '2px',
                     px: '8px',
-                    borderRadius: '100px'
+                    borderRadius: '100px',
+                    fontSize: '13px'
                 }}
-                fontWeight='bold'
+                fontWeight={600}
                 variant='body2'
             >
-                {props.timeFrom + '-' + props.timeTo}
+                {time}
             </Typography>
-            <Typography variant='h6' sx={{ width: 'fit-content' }}>
-                {props.name}
+            <Typography variant='h6' textAlign='start' sx={{ width: 'fit-content' }}>
+                {capitalizeFirstLetter(def ? def : activities[index])}
             </Typography>
         </Box>
     )
