@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Box, Typography } from '@mui/material'
 import Schedule from '../../components/pages/schedule/Schedule';
 import Template from '../../components/pages/template';
@@ -12,7 +12,9 @@ const Page = () => {
 
     return (
         <Template>
-            <Schedule />
+            <Suspense>
+                <Schedule />
+            </Suspense>
         </Template>
     )
 }
