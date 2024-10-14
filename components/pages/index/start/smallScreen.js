@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Box, Button, Typography } from '@mui/material'
 import Image from 'next/image'
 import logo from '../../../../public/logo/logo-gorizontal.svg'
 import kids from '../../../../public/children/start-circle.png'
-import MyButton from '@/components/UI/button'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Link from 'next/link'
 
 

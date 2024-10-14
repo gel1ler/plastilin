@@ -1,4 +1,7 @@
-import Index from "@/components/pages/index"
+import About from "@/components/pages/index/about/about"
+import Contacts from "@/components/pages/index/contacts"
+import Start from "@/components/pages/index/start"
+import Template from "@/components/pages/template"
 
 export const metadata = {
   title: 'Пластилин - детский центр в Раменском',
@@ -6,7 +9,11 @@ export const metadata = {
 }
 
 export default function Page() {
-  return(
-    <Index />
+  return (
+    <Template main>
+      <Start />
+      <About />
+      <Contacts />
+    </Template>
   )
 }

@@ -1,4 +1,4 @@
-import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React from 'react'
 import { teachers } from '../../../../../data'
 import ArrowText from '@/components/UI/text/arrowText'
@@ -6,8 +6,6 @@ import HelperText from '@/components/UI/text/helperText'
 import Teacher from '@/components/pages/teachers/teacher'
 
 const Teachers = () => {
-    const theme = useTheme()
-    const isLargeScreen = useMediaQuery(theme.breakpoints.up('md'))
     return (
         <Box id='teachers' className='column-centered'>
             <Typography data-aos='fade-up' variant='h3' textAlign='center'>Наши <b>педагоги</b></Typography>

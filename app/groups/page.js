@@ -1,4 +1,6 @@
-import Index from "@/components/pages/groups"
+import Info from "@/components/pages/groups/info"
+import Template from "@/components/pages/template"
+import { additionalGroupsData, groupsData } from "@/data"
 
 export const metadata = {
   title: 'Пластилин - группы',
@@ -6,7 +8,12 @@ export const metadata = {
 }
 
 export default function Page() {
-  return(
-    <Index />
+  return (
+    <Template>
+      <Info
+        data={groupsData}
+        additionalData={additionalGroupsData}
+      />
+    </Template>
   )
 }
