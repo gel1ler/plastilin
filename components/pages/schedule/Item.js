@@ -7,6 +7,10 @@ const Item = ({ props, index, lessonIndex }) => {
         <Box
             bgcolor='white'
             sx={{
+                boxShadow: '0 0px 3px 1px rgba(0, 0, 0, 0.1)',
+                borderRadius: '20px',
+                p:2,
+                pb:1,
                 minWidth: '170px',
                 display: 'flex',
                 flexDirection: 'column',

@@ -135,7 +135,7 @@ const Schedule = () => {
                                 >
                                     <Box
                                         sx={{
-                                            bgcolor: 'white',
+                                            // bgcolor: 'white',
                                             width: '80%',
                                             display: 'grid',
                                             gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr', '1fr 1fr 1fr'],
@@ -146,8 +146,8 @@ const Schedule = () => {
                                             gap: '10px',
                                             p: 2,
                                             pt:3,
-                                            boxShadow: '0 0px 5px 2px rgba(0, 0, 0, 0.1)',
-                                            borderRadius: '20px',
+                                            // boxShadow: '0 0px 5px 2px rgba(0, 0, 0, 0.1)',
+                                            // borderRadius: '20px',
                                             maxWidth: '1000px',
                                             my: 1
                                         }}
@@ -155,7 +155,7 @@ const Schedule = () => {
                                         {groups[validGroup].map((lesson, lessonIndex) => (
                                             <Box key={lessonIndex} sx={{ width: '100%' }}>
                                                 <Item props={lesson} index={key} lessonIndex={lessonIndex} />
-                                                {lessonIndex === groups[validGroup].length - 1 ? null :
+                                                {/* {lessonIndex === groups[validGroup].length - 1 ? null :
                                                     <Divider
                                                         sx={{
                                                             my: 1,
@@ -163,7 +163,7 @@ const Schedule = () => {
                                                             display: ['block', 'block', 'block', (lessonIndex + 1) % 9 === 0 ? 'none' : 'block', (lessonIndex + 1) % 6 === 0 ? 'none' : 'block'],
                                                         }}
                                                     />
-                                                }
+                                                } */}
                                             </Box>
                                         ))}
                                     </Box>

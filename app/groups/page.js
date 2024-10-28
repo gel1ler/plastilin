@@ -4,7 +4,7 @@ import { additionalGroupsData, groupsData } from "@/data"
 
 export const metadata = {
   title: 'Пластилин - группы',
-  description: '5 возрастных групп от 1 года и 2 месяцев.',
+  description: '4 возрастные группы от 1 года и 2 месяцев.',
 }
 
 export default function Page() {

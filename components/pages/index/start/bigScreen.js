@@ -109,7 +109,7 @@ const BigScreen = () => {
                             <b>Идет набор</b> в группы
                         </Typography>
                         <Typography data-aos='fade-up' variant='h6' textAlign='center' sx={{ mt: 1, width: '90%', mx: 'auto' }}>
-                            5 возрастных групп от <b>1.2 года</b>
+                            4 возрастные группы от <b>1.2 года</b>
                         </Typography>
                     </Box>
                     <Box sx={{ display: 'flex', gap: 2 }}>

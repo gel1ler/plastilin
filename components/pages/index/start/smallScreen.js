@@ -60,7 +60,7 @@ const SmallScreen = () => {
                         width: '90%',
                     }}
                 >
-                    5 возрастных групп от <b>1.2 года</b>
+                    4 возрастные группы от <b>1.2 года</b>
                 </Typography>
             </Box>
             <Box sx={{ display: 'flex', gap: 2 }}>
