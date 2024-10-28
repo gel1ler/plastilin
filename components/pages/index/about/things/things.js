@@ -1,10 +1,10 @@
+'use client'
 import React from 'react'
 import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
 import { what } from '../../../../../data'
 import { useMediaQuery } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
-import HelperText from '@/components/UI/text/helperText'
 
 const Things = () => {
   const theme = useTheme()

@@ -2,9 +2,10 @@ import { Box, Typography, Collapse, IconButton, List, ListItemText, Button } fro
 import React, { useState } from 'react'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import Link from 'next/link';
 
 const Group = ({ props }) => {
-    const { title, description, prices, age, yearWord } = props;
+    const { title, description, prices, age, yearWord, schedule } = props;
     const [expanded, setExpanded] = useState(false);
 
     const handleExpandClick = () => {
@@ -58,9 +59,11 @@ const Group = ({ props }) => {
                         <Button>
                             Подробнее
                         </Button>
-                        <Button variant='contained'>
-                            Рапсисание
-                        </Button>
+                        <Link href={`/schedule?group=${schedule}`}>
+                            <Button variant='contained' onClick={(e) => e.stopPropagation()}>
+                                Рапсисание
+                            </Button>
+                        </Link>
                     </Box>
                     <IconButton
                         onClick={handleExpandClick}

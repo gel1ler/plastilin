@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Box, Button, IconButton, Typography } from '@mui/material'
+import { Box, Button, Typography } from '@mui/material'
 import Image from 'next/image'
 import kids1 from '../../../../public/children/1h.jpg'
 import kids2 from '../../../../public/children/2h.jpg'
@@ -109,7 +109,7 @@ const BigScreen = () => {
                             <b>Идет набор</b> в группы
                         </Typography>
                         <Typography data-aos='fade-up' variant='h6' textAlign='center' sx={{ mt: 1, width: '90%', mx: 'auto' }}>
-                            5 возрастных групп от <b>1.2 года</b>
+                            4 возрастные группы от <b>1.2 года</b>
                         </Typography>
                     </Box>
                     <Box sx={{ display: 'flex', gap: 2 }}>

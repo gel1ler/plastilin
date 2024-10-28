@@ -41,10 +41,11 @@ const Header = ({ main }) => {
                     left: 0,
                     right: 0,
                     position: 'fixed',
-                    bgcolor: 'white',
+                    bgcolor: isActive ? 'white' : 'transparent',
                     zIndex: 900,
-                    transition: 'box-shadow .2s ease-out',
+                    transition: 'all .2s ease-out',
                     height: '90px'
+
                 }}
                 className={isActive ? 'shadow' : null}
             >
@@ -126,11 +127,11 @@ const Header = ({ main }) => {
                     right: 0,
                     position: 'fixed',
                     zIndex: 900,
-                    transition: 'box-shadow .2s ease-out',
+                    bgcolor: isActive ? 'white' : 'transparent',
+                    transition: 'all .2s ease-out',
                     display: 'flex',
                     alignItems: 'center',
                     px: [1, 2, 3, 4],
-                    bgcolor: 'white',
                 }}
                 className={isActive ? 'shadow' : null}
             >

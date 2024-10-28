@@ -1,8 +1,9 @@
+'use client'
 import React, { useEffect, useState } from 'react'
 import { Box, TextField, Typography } from '@mui/material'
 import MyButton from '@/components/UI/button'
 
-const Form = ({center, m}) => {
+const Form = ({ center, m }) => {
     const [pName, setPName] = useState('')
     const [cName, setCName] = useState('')
     const [age, setAge] = useState('')

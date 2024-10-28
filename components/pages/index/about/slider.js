@@ -1,9 +1,9 @@
+'use client'
 import React from 'react'
 import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
 import { begin as arr } from '../../../../data'
 import half from '@/public/falling/half.svg'
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 import Plx from 'react-plx'
 import HelperText from '@/components/UI/text/helperText'
 
